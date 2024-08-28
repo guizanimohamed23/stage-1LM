@@ -1,11 +1,11 @@
 import React from "react";
 import { Typography, IconButton, Box, Link } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
+import Grid from "@mui/material/Grid2";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 
-export default function Footer() {
+export default function Footer({ style }) {
   return (
     <footer
       style={{
@@ -14,10 +14,15 @@ export default function Footer() {
         padding: "18px 0",
         marginTop: "auto",
         width: "100%",
+        ...style,
       }}
     >
       <Grid container spacing={3} alignItems="center">
-        <Grid item xs={12} sm={4} md={2} style={{ textAlign: "center" }}>
+        <Grid
+          item
+          size={{ xs: 12, sm: 4, md: 2 }}
+          style={{ textAlign: "center" }}
+        >
           <Box>
             <img
               src="./src/assets/logowhite.png"
@@ -52,21 +57,18 @@ export default function Footer() {
 
         <Grid
           item
-          xs={12}
-          sm={8}
-          md={8}
+          size={{ xs: 12, sm: 8, md: 8 }}
           container
           spacing={3}
           style={{ justifyContent: "space-between" }}
         >
-          <Grid item xs={6} md={2}>
+          <Grid item size={{ xs: 6, md: 2 }}>
             <Typography
               variant="h6"
               gutterBottom
               style={{
                 color: "#EABA2B",
                 fontSize: "18px",
-
                 transition: "color 0.3s, transform 0.3s",
               }}
               sx={{
@@ -84,7 +86,7 @@ export default function Footer() {
                 transition: "color 0.3s, transform 0.3s",
               }}
             >
-              Qui Somme Nous?mmm
+              Qui Somme Nous?
             </Typography>
             <Typography
               style={{
@@ -95,7 +97,7 @@ export default function Footer() {
               Chiffres
             </Typography>
           </Grid>
-          <Grid item xs={6} md={2}>
+          <Grid item size={{ xs: 6, md: 2 }}>
             <Typography
               variant="h6"
               gutterBottom
@@ -122,7 +124,7 @@ export default function Footer() {
               Roles
             </Typography>
           </Grid>
-          <Grid item xs={6} md={2}>
+          <Grid item size={{ xs: 6, md: 2 }}>
             <Typography
               variant="h6"
               gutterBottom
@@ -143,7 +145,6 @@ export default function Footer() {
             <Typography
               style={{
                 fontSize: "14px",
-
                 transition: "color 0.3s, transform 0.3s",
               }}
             >
@@ -152,7 +153,6 @@ export default function Footer() {
             <Typography
               style={{
                 fontSize: "14px",
-
                 transition: "color 0.3s, transform 0.3s",
               }}
               sx={{
@@ -165,7 +165,7 @@ export default function Footer() {
               Suivi De La Demande
             </Typography>
           </Grid>
-          <Grid item xs={6} md={2}>
+          <Grid item size={{ xs: 6, md: 2 }}>
             <Typography
               variant="h6"
               gutterBottom
@@ -184,7 +184,7 @@ export default function Footer() {
               Publication
             </Typography>
           </Grid>
-          <Grid item xs={6} md={2}>
+          <Grid item size={{ xs: 6, md: 2 }}>
             <Typography
               variant="h6"
               gutterBottom
@@ -231,7 +231,7 @@ export default function Footer() {
               Activités Du Conseil
             </Typography>
           </Grid>
-          <Grid item xs={6} md={2}>
+          <Grid item size={{ xs: 6, md: 2 }}>
             <Typography
               variant="h6"
               gutterBottom
@@ -295,25 +295,25 @@ export default function Footer() {
           alignItems="center"
           spacing={10}
         >
-          <Grid item xs={2}>
+          <Grid item size={2}>
             <Typography style={{ fontSize: "14px" }}>FAQ</Typography>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item size={2}>
             <Typography style={{ fontSize: "14px", textAlign: "center" }}>
               Recherche
             </Typography>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item size={2}>
             <Typography style={{ fontSize: "14px", textAlign: "center" }}>
               Suivi des dossiers
             </Typography>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item size={2}>
             <Typography style={{ fontSize: "14px", textAlign: "center" }}>
               Liens utiles
             </Typography>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item size={2}>
             <Typography style={{ fontSize: "14px", textAlign: "center" }}>
               Contact
             </Typography>
