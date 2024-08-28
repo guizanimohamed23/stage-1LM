@@ -1,5 +1,5 @@
 import React from "react";
-import Acceuil from "./Components/Pages/Acceuil.jsx";
+import Acceuil from "./screens/Acceuil.jsx";
 import Footer from "./Components/Footer.jsx";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
     >
       <Acceuil />
-      <Footer />
+      <Footer style={{ marginTop: "auto" }} />
     </div>
   );
 }

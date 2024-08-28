@@ -20,7 +20,7 @@ export default function Footer() {
         <Grid item xs={12} sm={4} md={2} style={{ textAlign: "center" }}>
           <Box>
             <img
-              src="/public/logowhite.png"
+              src="./src/assets/logowhite.png"
               alt="Logo"
               style={{ marginBottom: "10px", maxWidth: "100px" }}
             />
