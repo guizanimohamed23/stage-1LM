@@ -84,7 +84,7 @@ export default function Footer() {
                 transition: "color 0.3s, transform 0.3s",
               }}
             >
-              Qui Somme Nous?
+              Qui Somme Nous?mmm
             </Typography>
             <Typography
               style={{
