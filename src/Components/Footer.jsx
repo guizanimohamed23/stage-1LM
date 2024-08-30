@@ -1,23 +1,24 @@
-import React from "react";
-import { Typography, IconButton, Box, Link } from "@mui/material";
+import { Typography, IconButton, Box} from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 
-export default function Footer({ style }) {
+
+// fix the space around the footer !!!!
+
+
+export default function Footer() {
   return (
-    <footer
+    <Box
       style={{
         backgroundColor: "#002b5c",
         color: "#fff",
-        padding: "18px 0",
-        marginTop: "auto",
-        width: "100%",
-        ...style,
+        margin:'0',
+        padding:'0'
       }}
     >
-      <Grid container spacing={3} alignItems="center">
+      <Grid container spacing={3} alignItems="center" style={{ margin: 0, padding: 0, width: "100%" }}>
         <Grid
           item
           size={{ xs: 12, sm: 4, md: 2 }}
@@ -140,7 +141,7 @@ export default function Footer({ style }) {
                 },
               }}
             >
-              Accès à l'Information
+              Accès à l`Information
             </Typography>
             <Typography
               style={{
@@ -154,12 +155,6 @@ export default function Footer({ style }) {
               style={{
                 fontSize: "14px",
                 transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
               }}
             >
               Suivi De La Demande
@@ -317,6 +312,6 @@ export default function Footer({ style }) {
           All Rights Reserved &copy; {new Date().getFullYear()}
         </Typography>
       </Box>
-    </footer>
+    </Box>
   );
 }
