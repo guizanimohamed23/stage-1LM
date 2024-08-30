@@ -4,17 +4,18 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 
+
+// fix the space around the footer !!!!
+
+
 export default function Footer() {
   return (
-    <div
+    <Box
       style={{
         backgroundColor: "#002b5c",
         color: "#fff",
         margin:'0',
-        padding:'0',
-        boxSizing:'border-box',
-        width:'100%',
-        maxWidth:'non'
+        padding:'0'
       }}
     >
       <Grid container spacing={3} alignItems="center" style={{ margin: 0, padding: 0, width: "100%" }}>
@@ -299,6 +300,6 @@ export default function Footer() {
           All Rights Reserved &copy; {new Date().getFullYear()}
         </Typography>
       </Box>
-    </div>
+    </Box>
   );
 }

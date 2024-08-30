@@ -7,7 +7,6 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import Grid from '@mui/material/Grid2';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
@@ -102,21 +101,15 @@ function NewsCarousel() {
             height: '100%',
             backgroundColor: 'rgb(0,0,0,0.6)',
             color: 'white',
-            display: 'flex',
-            alignItems:'center',
             borderRadius:'1rem',
             paddingLeft:'5rem'
           }}
         >
-        <Grid container xs={12}>
-            <Grid item xs={12}>
-                <Typography variant='h4'> <strong> {images[activeStep].label} </strong></Typography>
-            </Grid>
-            <Grid item xs={12}>
-                <Typography>Pour voir plus d’actualités</Typography>
-                <Button sx={{color:'white',bgcolor:'#EABA2B',borderRadius:'2rem'}}>Voir Plus</Button>
-            </Grid>
-        </Grid>
+          <Box position={'absolute'} top={'20%'}>
+            <Typography variant='h4'> <strong> {images[activeStep].label} </strong></Typography>
+            <Typography>Pour voir plus d’actualités</Typography>
+            <Button sx={{color:'white',bgcolor:'#EABA2B',borderRadius:'2rem'}}>Voir Plus</Button>
+          </Box>
         </Box>
       </Box>
 

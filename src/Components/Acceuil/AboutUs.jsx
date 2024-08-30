@@ -3,12 +3,13 @@ import Grid from "@mui/material/Grid2";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Divider from '@mui/material/Divider';
 
+
 function AboutUs() {
   return (
     <Box sx={{display:'flex',justifyContent:'center'}} marginTop={'3rem'}>
-    <Box bgcolor={'#EAEEF0'}  borderRadius={'1rem'} maxWidth={'75rem'} padding={'2rem'}>
-        <Grid container >
-            <Grid item xs={4} sm={6} maxWidth={'35rem'}>
+    <Box bgcolor={'#EAEEF0'}  borderRadius={'1rem'} padding={'2rem'} width={'70%'}>
+        <Grid container>
+            <Grid item size={{xs:12 , sm:7}}>
                 <Typography variant='h4' color={'#1A4870'}>
                     <strong>
                         QUI SOMME NOUS ?
@@ -23,7 +24,7 @@ function AboutUs() {
                 <Typography>
                     Le conseil de la concurrence est composé de treize (13) membres comme suit:
                 </Typography>
-                <Grid container>
+                <Grid container spacing={1}>
                     <Grid item>
                         <CheckCircleIcon style={{color:'#5B99C2'}}/>
                     </Grid>
@@ -33,7 +34,7 @@ function AboutUs() {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid container>
+                <Grid container spacing={1}>
                     <Grid item>
                         <CheckCircleIcon style={{color:'#5B99C2'}}/>
                     </Grid>
@@ -43,7 +44,7 @@ function AboutUs() {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid container>
+                <Grid container spacing={1}>
                     <Grid item>
                         <CheckCircleIcon style={{color:'#5B99C2'}}/>
                     </Grid>
@@ -53,30 +54,31 @@ function AboutUs() {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid container>
+                <Grid container spacing={1}>
                     <Grid item>
                         <CheckCircleIcon style={{color:'#5B99C2'}}/>
                     </Grid>
                     <Grid item>
-                        <Typography maxWidth={'23rem'}>
+                        <Typography sx={{maxWidth:'35rem'}}>
                             Quatre personnalités ayant exercé ou exerçant dans le domaine de la production, de la distribution, de l’artisanat ou des prestations de services
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid container xs={12}>
-                    <Grid item xs={2}>
+                <Grid container xs={12} spacing={1}>
+                    <Grid item>
                         <CheckCircleIcon style={{color:'#5B99C2'}}/>
                     </Grid>
-                    <Grid item xs={4}>
-                        <Typography maxWidth={'23rem'}>
+                    <Grid item >
+                        <Typography sx={{maxWidth:'35rem'}}>
                             Deux personnalités choisies en raison de leur compétence en matière économique
                             ou en matière de concurrence ou de consommation
                         </Typography>
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item sx={4} sm={6} style={{display:'flex',justifyContent:'center'}}>
-                <img src="http://cct.digit-r-consulting.com/wp-content/uploads/2023/05/comesa-1-1-768x577.jpg" alt="" style={{height:'550',maxWidth:'400px',borderRadius:'.5rem'}} />
+            <Grid item size={{xs:4, sm:2}}>
+                <img src="http://cct.digit-r-consulting.com/wp-content/uploads/2023/05/comesa-1-1-768x577.jpg" alt="" style={{maxWidth: '250%',
+                height: 'auto',borderRadius:'.5rem'}} />
             </Grid>
         </Grid>
     </Box>
