@@ -207,12 +207,6 @@ export default function Footer({ style }) {
                 fontSize: "14px",
                 transition: "color 0.3s, transform 0.3s",
               }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
-              }}
             >
               Actualités Du Conseil
             </Typography>
@@ -220,12 +214,6 @@ export default function Footer({ style }) {
               style={{
                 fontSize: "14px",
                 transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
               }}
             >
               Activités Du Conseil
@@ -254,12 +242,6 @@ export default function Footer({ style }) {
                 fontSize: "14px",
                 transition: "color 0.3s, transform 0.3s",
               }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
-              }}
             >
               A la lune
             </Typography>
@@ -267,12 +249,6 @@ export default function Footer({ style }) {
               style={{
                 fontSize: "14px",
                 transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
               }}
             >
               Galerie
@@ -304,12 +280,24 @@ export default function Footer({ style }) {
             </Typography>
           </Grid>
           <Grid item size={2}>
-            <Typography style={{ fontSize: "14px", textAlign: "center" }}>
+            <Typography
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                whiteSpace: "nowrap",
+              }}
+            >
               Suivi des dossiers
             </Typography>
           </Grid>
           <Grid item size={2}>
-            <Typography style={{ fontSize: "14px", textAlign: "center" }}>
+            <Typography
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                whiteSpace: "nowrap",
+              }}
+            >
               Liens utiles
             </Typography>
           </Grid>
