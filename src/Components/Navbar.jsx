@@ -26,7 +26,7 @@ const Navbar = () => {
   const [activeButton, setActiveButton] = useState("");
   const [anchorEl, setAnchorEl] = useState(null);
   const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down("lg"));
+  const isXs = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
