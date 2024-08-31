@@ -1,24 +1,27 @@
-import { Typography, IconButton, Box} from "@mui/material";
+import { Typography, IconButton, Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 
-
 // fix the space around the footer !!!!
-
-
+// (responsivity action) center the elements when on xs screen !!!!!
 export default function Footer() {
   return (
     <Box
       style={{
         backgroundColor: "#002b5c",
         color: "#fff",
-        margin:'0',
-        padding:'0'
+        margin: "0",
+        padding: "0",
       }}
     >
-      <Grid container spacing={3} alignItems="center" style={{ margin: 0, padding: 0, width: "100%" }}>
+      <Grid
+        container
+        spacing={3}
+        alignItems="center"
+        style={{ margin: 0, padding: 0, width: "100%" }}
+      >
         <Grid
           item
           size={{ xs: 12, sm: 4, md: 2 }}
