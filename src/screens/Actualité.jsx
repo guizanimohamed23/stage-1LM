@@ -1,11 +1,9 @@
-import ActualitéCard from "../Components/Actualité/ActualitéCard";
-import ActivitéCard from "../Components/Actualité/ActivitéCard";
+import Cards from "../Components/Actualité/Card";
 
 function Actualité() {
   return (
     <div>
-        <ActualitéCard />
-        <ActivitéCard />
+        <Cards/>
     </div>
   )
 }

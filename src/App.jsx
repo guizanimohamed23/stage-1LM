@@ -1,9 +1,9 @@
-import Acceuil from "./screens/Acceuil.jsx";
+import AppRoutes from "./AppRoutes.jsx";
 
 function App() {
   return (
     <div>
-      <Acceuil />
+      <AppRoutes/>
     </div>
   );
 }

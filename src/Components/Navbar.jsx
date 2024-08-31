@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -13,12 +14,12 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 const menuItems = [
-  "Accueil",
-  "Notre Mission",
-  "Accès à l'information",
-  "Publication",
-  "Actualités",
-  "La Presse",
+  {name: "Accueil", path:'/'},
+  {name: "Notre Mission", path: '/notrenimssion'},
+  {name: "Accès à l'information", path:'/accesalinformation'},
+  {name: "Publication", path: 'publication'},
+  {name: "Actualités", path:'actualite'},
+  {name: "La Presse", path: 'lapresse'},
 ];
 
 const Navbar = () => {
@@ -42,7 +43,7 @@ const Navbar = () => {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "#F5F5F5", boxShadow: "none" }}
+      sx={{ backgroundColor: "#F5F5F5", boxShadow: "none",marginBottom:'' }}
     >
       <Toolbar
         sx={{
@@ -75,7 +76,9 @@ const Navbar = () => {
             >
               {menuItems.map((item) => (
                 <MenuItem key={item} onClick={() => handleClick(item)}>
-                  {item}
+                  <Link to={item.path} key={item} style={{ textDecoration: 'none' }}>
+                  {item.name}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -102,7 +105,9 @@ const Navbar = () => {
                 }}
                 aria-current={activeButton === item ? "page" : undefined}
               >
-                {item}
+                <Link to={item.path} key={item} style={{ textDecoration: 'none' }}>
+                {item.name}
+                </Link>
               </Button>
             ))}
           </Box>
