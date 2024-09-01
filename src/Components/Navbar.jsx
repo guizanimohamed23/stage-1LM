@@ -13,8 +13,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 const menuItems = [
   { name: "Accueil", path: '/' },
-  { name: "Notre Mission", path: '/notrenimssion' },
-  { name: "Accès à l'information", path: '/accesalinformation' },
+  { name: "Notre Mission", path: '/mission' },
+  { name: "Accès à l'information", path: '/information' },
   { name: "Publication", path: 'publication' },
   { name: "Actualités", path: 'actualite' },
   { name: "La Presse", path: 'lapresse' },

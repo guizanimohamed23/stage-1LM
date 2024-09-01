@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Acceuil from "./screens/Acceuil";
 import Actualité from "./screens/Actualité";
-import Information from "./screens/information";
+import Information from "./screens/Information";
 
 function AppRoutes() {
   return (
