@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import {
   AppBar,
@@ -8,25 +8,22 @@ import {
   IconButton,
   Menu,
   MenuItem,
-  useMediaQuery,
-  useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const menuItems = [
-  {name: "Accueil", path:'/'},
-  {name: "Notre Mission", path: '/notrenimssion'},
-  {name: "Accès à l'information", path:'/accesalinformation'},
-  {name: "Publication", path: 'publication'},
-  {name: "Actualités", path:'actualite'},
-  {name: "La Presse", path: 'lapresse'},
+  { name: "Accueil", path: '/' },
+  { name: "Notre Mission", path: '/notrenimssion' },
+  { name: "Accès à l'information", path: '/accesalinformation' },
+  { name: "Publication", path: 'publication' },
+  { name: "Actualités", path: 'actualite' },
+  { name: "La Presse", path: 'lapresse' },
 ];
 
 const Navbar = () => {
   const [activeButton, setActiveButton] = useState("");
   const [anchorEl, setAnchorEl] = useState(null);
-  const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down("lg"));
+  const [isSticky, setIsSticky] = useState(false);
 
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
@@ -40,10 +37,36 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const stickyThreshold = 100; // Adjust this value based on when you want the AppBar to stick
+
+    if (scrollTop > stickyThreshold) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <AppBar
-      position="static"
-      sx={{ backgroundColor: "#F5F5F5", boxShadow: "none",marginBottom:'' }}
+      position={isSticky ? 'fixed' : 'absolute'}
+      sx={{
+        left: 0,
+        right: 0,
+        transition: 'top 0.3s',
+        width: '100%',
+        bgcolor: 'white',
+        zIndex: 1100,
+      }}
     >
       <Toolbar
         sx={{
@@ -52,66 +75,75 @@ const Navbar = () => {
           justifyContent: "space-between",
         }}
       >
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Box sx={{ display: {xs:'none',sm:'none',md:'flex'}, alignItems: "center", gap: 2 }}>
           <img
             src="/red logo.png"
             alt="Logo"
             style={{ width: 30, height: 30 }}
           />
         </Box>
-        {isXs ? (
-          <>
-            <IconButton
-              edge="end"
-              color="#EABA2B"
-              aria-label="menu"
-              onClick={handleMenuOpen}
+        <Box
+          sx={{
+            display: { xs: 'none', md: 'flex' },
+            gap: 2,
+          }}
+        >
+          {menuItems.map((item) => (
+            <Button
+              key={item.path}
+              onClick={() => handleClick(item.name)}
+              sx={{
+                color: activeButton === item.name ? "white" : "#1A4870",
+                border: activeButton === item.name ? "2px #5B99C2" : "none",
+                backgroundColor:
+                  activeButton === item.name ? "#5B99C2" : "transparent",
+                transition: "all 0.3s ease",
+                padding: "8px 16px",
+                borderRadius: "30px",
+              }}
+              aria-current={activeButton === item.name ? "page" : undefined}
             >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleMenuClose}
-            >
-              {menuItems.map((item) => (
-                <MenuItem key={item} onClick={() => handleClick(item)}>
-                  <Link to={item.path} key={item} style={{ textDecoration: 'none' }}>
-                  {item.name}
-                  </Link>
-                </MenuItem>
-              ))}
-            </Menu>
-          </>
-        ) : (
-          <Box
-            sx={{
-              display: "flex",
-              gap: 2,
-            }}
+              <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                {item.name}
+              </Link>
+            </Button>
+          ))}
+        </Box>
+        <Box
+          sx={{
+            display: { xs: 'flex', md: 'none' },
+          }}
+        >
+          
+          <IconButton
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleMenuOpen}
+          >
+            <MenuIcon sx={{ color: 'black' }} />
+          </IconButton>
+          <Box sx={{ alignItems: "center", gap: 2,position:'absolute',left:'45%',top:'25%'}}>
+          <img
+            src="/red logo.png"
+            alt="Logo"
+            style={{ width: 30, height: 30 }}
+          />
+          </Box>
+          <Menu
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleMenuClose}
           >
             {menuItems.map((item) => (
-              <Button
-                key={item}
-                onClick={() => handleClick(item)}
-                sx={{
-                  color: activeButton === item ? "white" : "#1A4870",
-                  border: activeButton === item ? "2px #5B99C2" : "none",
-                  backgroundColor:
-                    activeButton === item ? "#5B99C2" : "transparent",
-                  transition: "all 0.3s ease",
-                  padding: "8px 16px",
-                  borderRadius: "30px",
-                }}
-                aria-current={activeButton === item ? "page" : undefined}
-              >
-                <Link to={item.path} key={item} style={{ textDecoration: 'none' }}>
-                {item.name}
+              <MenuItem key={item.path} onClick={() => handleClick(item.name)}>
+                <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  {item.name}
                 </Link>
-              </Button>
+              </MenuItem>
             ))}
-          </Box>
-        )}
+          </Menu>
+        </Box>
         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
           <img
             src="/logo france.png"

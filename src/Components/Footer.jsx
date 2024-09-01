@@ -4,28 +4,31 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 
-// fix the space around the footer !!!!
-// (responsivity action) center the elements when on xs screen !!!!!
 export default function Footer() {
   return (
     <Box
-      style={{
+      position="absolute"
+      width="100%"
+      sx={{
         backgroundColor: "#002b5c",
         color: "#fff",
-        margin: "0",
-        padding: "0",
+        padding: "20px 0",
+        left:'0',right:'0'
       }}
     >
       <Grid
         container
         spacing={3}
         alignItems="center"
-        style={{ margin: 0, padding: 0, width: "100%" }}
+        justifyContent="center"
+        sx={{ mb: 3 }}
       >
         <Grid
           item
-          size={{ xs: 12, sm: 4, md: 2 }}
-          style={{ textAlign: "center" }}
+          xs={12}
+          sm={4}
+          md={2}
+          sx={{ textAlign: "center" }}
         >
           <Box>
             <img
@@ -35,7 +38,7 @@ export default function Footer() {
             />
             <Box display="flex" justifyContent="center" mt={1}>
               <IconButton
-                style={{
+                sx={{
                   color: "white",
                   marginRight: "10px",
                   fontSize: "1.2rem",
@@ -44,7 +47,7 @@ export default function Footer() {
                 <FacebookIcon />
               </IconButton>
               <IconButton
-                style={{
+                sx={{
                   color: "white",
                   marginRight: "10px",
                   fontSize: "1.2rem",
@@ -52,7 +55,9 @@ export default function Footer() {
               >
                 <YouTubeIcon />
               </IconButton>
-              <IconButton style={{ color: "white", fontSize: "1.2rem" }}>
+              <IconButton
+                sx={{ color: "white", fontSize: "1.2rem" }}
+              >
                 <EmailIcon />
               </IconButton>
             </Box>
@@ -61,197 +66,51 @@ export default function Footer() {
 
         <Grid
           item
-          size={{ xs: 12, sm: 8, md: 8 }}
+          xs={12}
+          sm={8}
+          md={8}
           container
           spacing={3}
-          style={{ justifyContent: "space-between" }}
+          justifyContent="center"
+          sx={{ mb: 3 }}
         >
-          <Grid item size={{ xs: 6, md: 2 }}>
-            <Typography
-              variant="h6"
-              gutterBottom
-              style={{
-                color: "#EABA2B",
-                fontSize: "18px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              Accueil
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              Qui Somme Nous?
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              Chiffres
-            </Typography>
-          </Grid>
-          <Grid item size={{ xs: 6, md: 2 }}>
-            <Typography
-              variant="h6"
-              gutterBottom
-              style={{
-                color: "#EABA2B",
-                fontSize: "18px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              Présentation
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              Roles
-            </Typography>
-          </Grid>
-          <Grid item size={{ xs: 6, md: 2 }}>
-            <Typography
-              variant="h6"
-              gutterBottom
-              style={{
-                color: "#EABA2B",
-                fontSize: "18px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              Accès à l`Information
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              Comment Pouvons-Nous Aider?
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              Suivi De La Demande
-            </Typography>
-          </Grid>
-          <Grid item size={{ xs: 6, md: 2 }}>
-            <Typography
-              variant="h6"
-              gutterBottom
-              style={{
-                color: "#EABA2B",
-                fontSize: "18px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              Publication
-            </Typography>
-          </Grid>
-          <Grid item size={{ xs: 6, md: 2 }}>
-            <Typography
-              variant="h6"
-              gutterBottom
-              style={{
-                color: "#EABA2B",
-                fontSize: "18px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              Actualités
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              Actualités Du Conseil
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              Activités Du Conseil
-            </Typography>
-          </Grid>
-          <Grid item size={{ xs: 6, md: 2 }}>
-            <Typography
-              variant="h6"
-              gutterBottom
-              style={{
-                color: "#EABA2B",
-                fontSize: "18px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-              sx={{
-                "&:hover": {
-                  color: "#ffeb3b",
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              La Presse
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              A la lune
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "14px",
-                transition: "color 0.3s, transform 0.3s",
-              }}
-            >
-              Galerie
-            </Typography>
-          </Grid>
+          {[
+            { title: "Accueil", items: ["Qui Somme Nous?", "Chiffres"] },
+            { title: "Présentation", items: ["Roles"] },
+            { title: "Accès à l’Information", items: ["Comment Pouvons-Nous Aider?", "Suivi De La Demande"] },
+            { title: "Publication", items: [] },
+            { title: "Actualités", items: ["Actualités Du Conseil", "Activités Du Conseil"] },
+            { title: "La Presse", items: ["A la lune", "Galerie"] },
+          ].map((section, index) => (
+            <Grid item xs={6} md={2} key={index}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                sx={{
+                  color: "#EABA2B",
+                  fontSize: "18px",
+                  transition: "color 0.3s, transform 0.3s",
+                  "&:hover": {
+                    color: "#ffeb3b",
+                    transform: "scale(1.1)",
+                  },
+                }}
+              >
+                {section.title}
+              </Typography>
+              {section.items.map((item, idx) => (
+                <Typography
+                  key={idx}
+                  sx={{
+                    fontSize: "14px",
+                    transition: "color 0.3s, transform 0.3s",
+                  }}
+                >
+                  {item}
+                </Typography>
+              ))}
+            </Grid>
+          ))}
         </Grid>
       </Grid>
 
@@ -263,54 +122,27 @@ export default function Footer() {
         borderTop="2px solid #ffffff33"
         pt={3}
       >
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          spacing={10}
-        >
-          <Grid item size={2}>
-            <Typography style={{ fontSize: "14px" }}>FAQ</Typography>
-          </Grid>
-          <Grid item size={2}>
-            <Typography style={{ fontSize: "14px", textAlign: "center" }}>
-              Recherche
-            </Typography>
-          </Grid>
-          <Grid item size={2}>
-            <Typography
-              style={{
-                fontSize: "14px",
-                textAlign: "center",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Suivi des dossiers
-            </Typography>
-          </Grid>
-          <Grid item size={2}>
-            <Typography
-              style={{
-                fontSize: "14px",
-                textAlign: "center",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Liens utiles
-            </Typography>
-          </Grid>
-          <Grid item size={2}>
-            <Typography style={{ fontSize: "14px", textAlign: "center" }}>
-              Contact
-            </Typography>
-          </Grid>
+        <Grid container justifyContent="center" spacing={2}>
+          {["FAQ", "Recherche", "Suivi des dossiers", "Liens utiles", "Contact"].map((text, index) => (
+            <Grid item xs={6} sm={2} key={index}>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  textAlign: "center",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {text}
+              </Typography>
+            </Grid>
+          ))}
         </Grid>
       </Box>
 
-      <Box textAlign="right" mt={2} pr={2}>
+      <Box textAlign="center" mt={2} px={2}>
         <Typography
           variant="body2"
-          style={{ fontSize: "18px", marginRight: "20px" }}
+          sx={{ fontSize: "14px" }}
         >
           All Rights Reserved &copy; {new Date().getFullYear()}
         </Typography>

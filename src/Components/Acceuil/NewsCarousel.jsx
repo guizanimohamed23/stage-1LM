@@ -50,7 +50,7 @@ function NewsCarousel() {
   };
 
   return (
-    <div style={{display:'flex',justifyContent:'center'}}>
+    <div style={{display:'flex',justifyContent:'center',marginTop:'5rem'}}>
     <Box
       sx={{
         maxWidth: 600,
