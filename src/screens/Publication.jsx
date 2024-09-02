@@ -1,14 +1,19 @@
-import Cards from "../Components/Actualité/Card";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-function Actualité() {
+
+function Publication() {
   return (
+    <>
+    <Navbar/>
     <div>
-      <Navbar/>
-      <Cards/>
+      
+      <div>
+        Publication
+      </div>
       <Footer/>
     </div>
+    </>
   )
 }
 
-export default Actualité
+export default Publication

@@ -8,24 +8,23 @@ import Typography from '@mui/material/Typography';
 
 function Cards() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 , marginTop:'5rem'}}>
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image="http://cct.digit-r-consulting.com/wp-content/uploads/2022/05/c.jpeg"
         title="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" sx={{display:'center', justifyContent:'center'}}>
           Lizard
         </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        <Typography variant="body2" sx={{ color: 'text.secondary', textAlign:'center' }}>
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+      <CardActions sx={{display:'flex', justifyContent:'center'}}>
+        <Button size="small">Lire de Suite</Button>
       </CardActions>
     </Card>
   );
