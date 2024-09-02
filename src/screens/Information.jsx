@@ -12,7 +12,7 @@ export default function Information() {
 
       <Box
         sx={{ display: "flex", justifyContent: "center" }}
-        marginTop={"3rem"}
+        marginTop={"5rem"}
       >
         <Box
           bgcolor={"#f7f9fa"}
