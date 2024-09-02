@@ -1,11 +1,9 @@
-import { Typography, Box, Divider } from "@mui/material";
-
-import Grid from "@mui/material/Grid2";
+import { Box, Button, TextField, Typography, Divider } from "@mui/material";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-
-export default function Information() {
+import Grid from "@mui/material/Grid2";
+function Information() {
   return (
     <Box>
       <Navbar />
@@ -208,9 +206,9 @@ export default function Information() {
       <Box
         sx={{
           position: "relative",
-          width: "100%",
+          width: "100vw",
           height: { xs: "300px", md: "400px" },
-          backgroundImage: 'url("src/assets/image 3.png")',
+          backgroundImage: 'url("src/assets/image32.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
@@ -222,16 +220,9 @@ export default function Information() {
           padding: "1rem",
           paddingTop: "2rem",
           paddingLeft: "2rem",
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.4)",
-            zIndex: 0,
-          },
+          overflow: "hidden", // Ensure no white spaces appear
+          margin: "0", // Remove any extra margin
+          boxSizing: "border-box", // Ensure padding and border do not affect the element's width
           zIndex: 1,
         }}
       >
@@ -267,9 +258,80 @@ export default function Information() {
         >
           Pour suivre votre demande, veuillez introduire la référence
         </Typography>
+        <Box
+          sx={{
+            display: "flex", // Use flexbox to align items horizontally
+            alignItems: "center",
+            width: { xs: "90%", sm: "80%", md: "60%" },
+            maxWidth: "500px",
+            marginTop: "2rem",
+            gap: "1rem", // Add space between TextField and Button
+          }}
+        >
+          <TextField
+            fullWidth
+            label="Numéro"
+            variant="outlined"
+            sx={{
+              input: {
+                color: "white", // Text color inside the TextField
+              },
+              label: {
+                color: "white", // Label color
+              },
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "white",
+                  borderRadius: "3rem", // Border color of the TextField
+                },
+                "&:hover fieldset": {
+                  borderColor: "white", // Border color on hover
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "white", // Border color when focused
+                },
+              },
+            }}
+          />
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{
+              height: "100%", // Make button height match the TextField
+              backgroundColor: "#EABA2B",
+              borderRadius: "3rem",
+              width: { xs: "30%", md: "200px" },
+              color: "white",
+              "&:hover": {
+                backgroundColor: "#D48A1C", // Darker color on hover
+              },
+            }}
+          >
+            Submit
+          </Button>
+
+          <Button
+            variant="outlined"
+            sx={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "32.5px",
+              border: "2px solid #FFFFFF",
+              boxSizing: "border-box",
+              color: "#FFFFFF",
+              "&:hover": {
+                border: "2px solid #FFFFFF",
+                backgroundColor: "rgba(255, 255, 255, 0.1)", // Adjust hover color if needed
+              },
+            }}
+          >
+            demande d’accès à l’information
+          </Button>
+        </Box>
       </Box>
 
       <Footer />
     </Box>
   );
 }
+export default Information;

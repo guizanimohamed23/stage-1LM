@@ -8,12 +8,13 @@ export default function Footer() {
   return (
     <Box
       position="absolute"
-      width="100%"
+      width="110vw" // Ensure the footer spans the full width of the viewport
       sx={{
         backgroundColor: "#002b5c",
         color: "#fff",
         padding: "20px 0",
-        left:'0',right:'0'
+        left: "0",
+        right: "0",
       }}
     >
       <Grid
@@ -23,13 +24,7 @@ export default function Footer() {
         justifyContent="center"
         sx={{ mb: 3 }}
       >
-        <Grid
-          item
-          xs={12}
-          sm={4}
-          md={2}
-          sx={{ textAlign: "center" }}
-        >
+        <Grid item xs={12} sm={4} md={2} sx={{ textAlign: "center" }}>
           <Box>
             <img
               src="./src/assets/logowhite.png"
@@ -55,9 +50,7 @@ export default function Footer() {
               >
                 <YouTubeIcon />
               </IconButton>
-              <IconButton
-                sx={{ color: "white", fontSize: "1.2rem" }}
-              >
+              <IconButton sx={{ color: "white", fontSize: "1.2rem" }}>
                 <EmailIcon />
               </IconButton>
             </Box>
@@ -77,9 +70,15 @@ export default function Footer() {
           {[
             { title: "Accueil", items: ["Qui Somme Nous?", "Chiffres"] },
             { title: "Présentation", items: ["Roles"] },
-            { title: "Accès à l’Information", items: ["Comment Pouvons-Nous Aider?", "Suivi De La Demande"] },
+            {
+              title: "Accès à l’Information",
+              items: ["Comment Pouvons-Nous Aider?", "Suivi De La Demande"],
+            },
             { title: "Publication", items: [] },
-            { title: "Actualités", items: ["Actualités Du Conseil", "Activités Du Conseil"] },
+            {
+              title: "Actualités",
+              items: ["Actualités Du Conseil", "Activités Du Conseil"],
+            },
             { title: "La Presse", items: ["A la lune", "Galerie"] },
           ].map((section, index) => (
             <Grid item xs={6} md={2} key={index}>
@@ -123,7 +122,13 @@ export default function Footer() {
         pt={3}
       >
         <Grid container justifyContent="center" spacing={2}>
-          {["FAQ", "Recherche", "Suivi des dossiers", "Liens utiles", "Contact"].map((text, index) => (
+          {[
+            "FAQ",
+            "Recherche",
+            "Suivi des dossiers",
+            "Liens utiles",
+            "Contact",
+          ].map((text, index) => (
             <Grid item xs={6} sm={2} key={index}>
               <Typography
                 sx={{
@@ -140,10 +145,7 @@ export default function Footer() {
       </Box>
 
       <Box textAlign="center" mt={2} px={2}>
-        <Typography
-          variant="body2"
-          sx={{ fontSize: "14px" }}
-        >
+        <Typography variant="body2" sx={{ fontSize: "14px" }}>
           All Rights Reserved &copy; {new Date().getFullYear()}
         </Typography>
       </Box>
