@@ -8,7 +8,6 @@ export default function Footer() {
   return (
     <Box
       position="absolute"
-      width="110vw" // Ensure the footer spans the full width of the viewport
       sx={{
         backgroundColor: "#002b5c",
         color: "#fff",

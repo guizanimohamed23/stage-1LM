@@ -3,23 +3,32 @@ import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Grid from "@mui/material/Grid2";
+import cover from "/image 3.png";
+import { textAlign } from "@mui/system";
+
 function Information() {
   return (
-    <Box>
+    <Box sx={{ overflowX: "hidden" }}>
+      {/* Navbar Component */}
       <Navbar />
 
+      {/* Main Content */}
       <Box
-        sx={{ display: "flex", justifyContent: "center" }}
-        marginTop={"5rem"}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          padding: "1rem",
+          marginTop: "5rem",
+        }}
       >
         <Box
           bgcolor={"#f7f9fa"}
           borderRadius={"1rem"}
-          padding={"3rem"}
-          width={"70%"}
+          padding={"2rem"}
+          width={{ xs: "90%", sm: "80%", md: "70%" }} // Responsive width
           boxShadow={"0 4px 8px rgba(0, 0, 0, 0.1)"}
         >
-          <Grid container>
+          <Grid container spacing={2}>
             <Grid item xs={12}>
               <Typography
                 variant="h4"
@@ -119,14 +128,14 @@ function Information() {
                   marginTop: "2rem",
                   marginBottom: "1rem",
                   fontWeight: "bold",
-                  fontSize: { xs: "1.5rem", md: "1.75rem" }, // Responsive font size
+                  fontSize: { xs: "1.5rem", md: "1.75rem" },
                 }}
               >
                 AU SENS DE LA PRÉSENTE LOI EN ENTEND PAR LES TERMES SUIVANTS :
               </Typography>
               <Divider
                 sx={{
-                  width: { xs: "90%", sm: "80%", md: "1000px" },
+                  width: { xs: "90%", sm: "80%", md: "600px", lg: "900px" },
                   borderWidth: "3px",
                   borderRadius: ".5rem",
                   bgcolor: "#EABA2B",
@@ -203,135 +212,102 @@ function Information() {
         </Box>
       </Box>
 
+      {/* Background Box with Text Input and Button */}
       <Box
         sx={{
-          position: "relative",
-          width: "100vw",
-          height: { xs: "300px", md: "400px" },
-          backgroundImage: 'url("src/assets/image32.png")',
+          backgroundImage: `url(${cover})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          width: "100%",
+          height: "250px",
+          height: "100%",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          justifyContent: "flex-start",
-          color: "white",
-          textAlign: "left",
+          alignItems: "center",
+          justifyContent: "center",
           padding: "1rem",
-          paddingTop: "2rem",
-          paddingLeft: "2rem",
-          overflow: "hidden", // Ensure no white spaces appear
-          margin: "0", // Remove any extra margin
-          boxSizing: "border-box", // Ensure padding and border do not affect the element's width
-          zIndex: 1,
+          boxSizing: "border-box",
+          position: "relative",
         }}
       >
-        <Typography
-          variant="h4"
-          color={"#EABA2B"}
-          sx={{
-            fontWeight: "bold",
-            marginBottom: "1rem",
-            fontSize: { xs: "24px", md: "32px" },
-            zIndex: 2, // Ensure the text appears above the overlay
-          }}
-        >
-          suivi de la demande
-        </Typography>
-        <Divider
-          sx={{
-            width: { xs: "70%", sm: "80%", md: "350px" },
-            borderWidth: "3px",
-            borderRadius: ".5rem",
-            bgcolor: "#EABA2B",
-            marginBottom: "1rem",
-            zIndex: 2,
-          }}
-        />
-        <Typography
-          variant="h6"
-          color="white"
-          sx={{
-            fontSize: { xs: "16px", md: "20px" },
-            zIndex: 2,
-          }}
-        >
-          Pour suivre votre demande, veuillez introduire la référence
-        </Typography>
-        <Box
-          sx={{
-            display: "flex", // Use flexbox to align items horizontally
-            alignItems: "center",
-            width: { xs: "90%", sm: "80%", md: "60%" },
-            maxWidth: "500px",
-            marginTop: "2rem",
-            gap: "1rem", // Add space between TextField and Button
-          }}
-        >
-          <TextField
-            fullWidth
-            label="Numéro"
-            variant="outlined"
-            sx={{
-              input: {
-                color: "white", // Text color inside the TextField
-              },
-              label: {
-                color: "white", // Label color
-              },
-              "& .MuiOutlinedInput-root": {
-                "& fieldset": {
-                  borderColor: "white",
-                  borderRadius: "3rem", // Border color of the TextField
-                },
-                "&:hover fieldset": {
-                  borderColor: "white", // Border color on hover
-                },
-                "&.Mui-focused fieldset": {
-                  borderColor: "white", // Border color when focused
-                },
-              },
-            }}
-          />
-          <Button
-            variant="contained"
-            color="secondary"
-            sx={{
-              height: "100%", // Make button height match the TextField
-              backgroundColor: "#EABA2B",
-              borderRadius: "3rem",
-              width: { xs: "30%", md: "200px" },
-              color: "white",
-              "&:hover": {
-                backgroundColor: "#D48A1C", // Darker color on hover
-              },
-            }}
-          >
-            Submit
-          </Button>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <Box sx={{ maxWidth: "400px", width: "100%" }}>
+              <Typography variant="h4" color="#EABA2B">
+                Suivi de la demande
+              </Typography>
+              <Typography variant="h6" sx={{ mb: 2 }} color="white">
+                Pour suivre votre demande, veuillez introduire la référence
+              </Typography>
+              <Box position="relative">
+                <TextField
+                  variant="outlined"
+                  label="Number"
+                  sx={{
+                    width: "100%",
+                    borderRadius: "10px", // Adjust the border radius
 
-          <Button
-            variant="outlined"
+                    borderWidth: "2px", // Border width for the fieldset
+                    borderRadius: "10px", // Border radius for the fieldset
+                    backgroundColor: "white",
+                  }}
+                />
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: "white", // Text color
+                    borderWidth: "2px", // Border width
+                    borderColor: "white",
+                    backgroundColor: "#1291FF",
+                    position: "relatiive",
+                    right: 0,
+                    top: 0,
+                    height: "100%",
+                    borderRadius: "10px",
+                    "&:hover": {
+                      backgroundColor: "#105EA3", // Background color on hover
+                    },
+                  }}
+                >
+                  Submit
+                </Button>
+              </Box>
+            </Box>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            md={6}
             sx={{
-              width: "100%",
-              height: "100%",
-              borderRadius: "32.5px",
-              border: "2px solid #FFFFFF",
-              boxSizing: "border-box",
-              color: "#FFFFFF",
-              "&:hover": {
-                border: "2px solid #FFFFFF",
-                backgroundColor: "rgba(255, 255, 255, 0.1)", // Adjust hover color if needed
-              },
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
+              alignItems: "center",
+              gap: "10px",
+              justifyContent: "center",
             }}
           >
-            demande d’accès à l’information
-          </Button>
-        </Box>
+            <Button
+              variant="contained"
+              sx={{ left: "90px" }}
+              onClick={() => {
+                window.open(
+                  "/src/assets/مطلب-نفاذ-الى-المعلومة-هيئة-النفاذ-الى-المعلومة-3.pdf",
+                  "_blank"
+                );
+              }}
+            >
+              Demande d’accès à l’information
+            </Button>
+            <Button variant="contained" sx={{ left: "90px" }}>
+              Demande de griff
+            </Button>
+          </Grid>
+        </Grid>
       </Box>
 
       <Footer />
     </Box>
   );
 }
+
 export default Information;
