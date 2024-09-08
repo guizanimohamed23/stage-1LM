@@ -33,12 +33,7 @@ export default function Footer() {
         backgroundColor: "#002b5c",
         color: "#fff",
         padding: "20px 0",
-<<<<<<< Updated upstream
-        left: "0",
-        right: "0",
-=======
         left: '0', right: '0'
->>>>>>> Stashed changes
       }}
     >
       <Grid
@@ -91,24 +86,7 @@ export default function Footer() {
           justifyContent="center"
           sx={{ mb: 3 }}
         >
-<<<<<<< Updated upstream
-          {[
-            { title: "Accueil", items: ["Qui Somme Nous?", "Chiffres"] },
-            { title: "Présentation", items: ["Roles"] },
-            {
-              title: "Accès à l’Information",
-              items: ["Comment Pouvons-Nous Aider?", "Suivi De La Demande"],
-            },
-            { title: "Publication", items: [] },
-            {
-              title: "Actualités",
-              items: ["Actualités Du Conseil", "Activités Du Conseil"],
-            },
-            { title: "La Presse", items: ["A la lune", "Galerie"] },
-          ].map((section, index) => (
-=======
           {sections.map((section, index) => (
->>>>>>> Stashed changes
             <Grid item xs={6} md={2} key={index}>
               <Typography
                 variant="h6"
@@ -150,17 +128,7 @@ export default function Footer() {
         pt={3}
       >
         <Grid container justifyContent="center" spacing={2}>
-<<<<<<< Updated upstream
-          {[
-            "FAQ",
-            "Recherche",
-            "Suivi des dossiers",
-            "Liens utiles",
-            "Contact",
-          ].map((text, index) => (
-=======
           {links.map((text, index) => (
->>>>>>> Stashed changes
             <Grid item xs={6} sm={2} key={index}>
               <Typography
                 sx={{
