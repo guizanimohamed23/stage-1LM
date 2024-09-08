@@ -1,10 +1,31 @@
-import { Typography, IconButton, Box } from "@mui/material";
-import Grid from "@mui/material/Grid2";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import EmailIcon from "@mui/icons-material/Email";
+
+import { Typography, IconButton, Box } from '@mui/material';
+import Grid from '@mui/material/Grid2';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import EmailIcon from '@mui/icons-material/Email';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
+  const sections = [
+    { title: t('footer.section1.title'), items: [t('footer.section1.item1'), t('footer.section1.item2')] },
+    { title: t('footer.section2.title'), items: [t('footer.section2.item1')] },
+    { title: t('footer.section3.title'), items: [t('footer.section3.item1'), t('footer.section3.item2')] },
+    { title: t('footer.section4.title'), items: [] },
+    { title: t('footer.section5.title'), items: [t('footer.section5.item1'), t('footer.section5.item2')] },
+    { title: t('footer.section6.title'), items: [t('footer.section6.item1'), t('footer.section6.item2')] },
+  ];
+
+  const links = [
+    t('footer.links.faq'),
+    t('footer.links.search'),
+    t('footer.links.track'),
+    t('footer.links.useful'),
+    t('footer.links.contact'),
+  ];
+
   return (
     <Box
       position="absolute"
@@ -12,8 +33,12 @@ export default function Footer() {
         backgroundColor: "#002b5c",
         color: "#fff",
         padding: "20px 0",
+<<<<<<< Updated upstream
         left: "0",
         right: "0",
+=======
+        left: '0', right: '0'
+>>>>>>> Stashed changes
       }}
     >
       <Grid
@@ -66,6 +91,7 @@ export default function Footer() {
           justifyContent="center"
           sx={{ mb: 3 }}
         >
+<<<<<<< Updated upstream
           {[
             { title: "Accueil", items: ["Qui Somme Nous?", "Chiffres"] },
             { title: "Présentation", items: ["Roles"] },
@@ -80,6 +106,9 @@ export default function Footer() {
             },
             { title: "La Presse", items: ["A la lune", "Galerie"] },
           ].map((section, index) => (
+=======
+          {sections.map((section, index) => (
+>>>>>>> Stashed changes
             <Grid item xs={6} md={2} key={index}>
               <Typography
                 variant="h6"
@@ -121,6 +150,7 @@ export default function Footer() {
         pt={3}
       >
         <Grid container justifyContent="center" spacing={2}>
+<<<<<<< Updated upstream
           {[
             "FAQ",
             "Recherche",
@@ -128,6 +158,9 @@ export default function Footer() {
             "Liens utiles",
             "Contact",
           ].map((text, index) => (
+=======
+          {links.map((text, index) => (
+>>>>>>> Stashed changes
             <Grid item xs={6} sm={2} key={index}>
               <Typography
                 sx={{

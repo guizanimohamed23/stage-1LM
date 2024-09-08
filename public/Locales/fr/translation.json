@@ -1,0 +1,102 @@
+{
+    "about_us": {
+      "title": "QUI SOMMES NOUS ?",
+      "intro": "Le Conseil de la concurrence a été institué par la loi n° 95-42 du 24 avril 1995 modifiant et complétant la loi n° 91-64 du 29 juillet 1991 relative à la concurrence et aux prix, remplaçant la Commission de la concurrence.",
+      "composition_intro": "Le conseil de la concurrence est composé de treize (13) membres comme suit:",
+      "members": {
+        "president": "Un président",
+        "vice_presidents": "Deux vice-présidents",
+        "magistrates": "Quatre magistrats de deuxième grade au moins",
+        "personalities_production": "Quatre personnalités ayant exercé ou exerçant dans le domaine de la production, de la distribution, de l’artisanat ou des prestations de services",
+        "personalities_economic": "Deux personnalités choisies en raison de leur compétence en matière économique ou en matière de concurrence ou de consommation"
+      }
+    },
+    "cards": {
+      "annual_reports": {
+        "title": "Rapports Annuels",
+        "description": "Rapports annuels des travaux du Conseil de la concurrence"
+      },
+      "opinions": {
+        "title": "Avis",
+        "description": "Les avis annuels rendus par le Conseil de la concurrence"
+      },
+      "decisions": {
+        "title": "Décisions",
+        "description": "Les décisions rendues par le Conseil de la concurrence"
+      },
+      "legal_framework": {
+        "title": "Cadre Juridique",
+        "description": "Le cadre juridique du Conseil de la concurrence"
+      },
+      "view_more": "Voir Plus"
+    },
+    "navbar": {
+        "home": "Accueil",
+        "mission": "Notre Mission",
+        "information": "Accès à l'information",
+        "publication": "Publication",
+        "news": "Actualités",
+        "press": "La Presse"
+      },
+      "figures": {
+        "avis": "Avis",
+        "decisions": "Décisions",
+        "reports": "Rapports Annuels"
+    },
+    "footer": {
+    "section1": {
+      "title": "Accueil",
+      "item1": "Qui Somme Nous?",
+      "item2": "Chiffres"
+    },
+    "section2": {
+      "title": "Présentation",
+      "item1": "Roles"
+    },
+    "section3": {
+      "title": "Accès à l’Information",
+      "item1": "Comment Pouvons-Nous Aider?",
+      "item2": "Suivi De La Demande"
+    },
+    "section4": {
+      "title": "Publication",
+      "item1": ""
+    },
+    "section5": {
+      "title": "Actualités",
+      "item1": "Actualités Du Conseil",
+      "item2": "Activités Du Conseil"
+    },
+    "section6": {
+      "title": "La Presse",
+      "item1": "A la lune",
+      "item2": "Galerie"
+    },
+    "links": {
+      "faq": "FAQ",
+      "search": "Recherche",
+      "track": "Suivi des dossiers",
+      "useful": "Liens utiles",
+      "contact": "Contact"
+    }
+  },
+  "carousel": {
+    "seeMore": "Pour voir plus d’actualités",
+    "seeMoreButton": "Voir Plus",
+    "images": [
+      {
+        "label": "Visite d’une délégation du COMESA"
+      },
+      {
+        "label": "Bird"
+      },
+      {
+        "label": "Bali, Indonesia"
+      },
+      {
+        "label": "Goč, Serbia"
+      }
+    ]
+  }
+  }
+  
