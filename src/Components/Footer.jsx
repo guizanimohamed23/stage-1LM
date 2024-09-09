@@ -1,29 +1,40 @@
-
-import { Typography, IconButton, Box } from '@mui/material';
-import Grid from '@mui/material/Grid2';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import EmailIcon from '@mui/icons-material/Email';
-import { useTranslation } from 'react-i18next';
+import { Typography, IconButton, Box } from "@mui/material";
+import Grid from "@mui/material/Grid2";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import EmailIcon from "@mui/icons-material/Email";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { t } = useTranslation();
 
   const sections = [
-    { title: t('footer.section1.title'), items: [t('footer.section1.item1'), t('footer.section1.item2')] },
-    { title: t('footer.section2.title'), items: [t('footer.section2.item1')] },
-    { title: t('footer.section3.title'), items: [t('footer.section3.item1'), t('footer.section3.item2')] },
-    { title: t('footer.section4.title'), items: [] },
-    { title: t('footer.section5.title'), items: [t('footer.section5.item1'), t('footer.section5.item2')] },
-    { title: t('footer.section6.title'), items: [t('footer.section6.item1'), t('footer.section6.item2')] },
+    {
+      title: t("footer.section1.title"),
+      items: [t("footer.section1.item1"), t("footer.section1.item2")],
+    },
+    { title: t("footer.section2.title"), items: [t("footer.section2.item1")] },
+    {
+      title: t("footer.section3.title"),
+      items: [t("footer.section3.item1"), t("footer.section3.item2")],
+    },
+    { title: t("footer.section4.title"), items: [] },
+    {
+      title: t("footer.section5.title"),
+      items: [t("footer.section5.item1"), t("footer.section5.item2")],
+    },
+    {
+      title: t("footer.section6.title"),
+      items: [t("footer.section6.item1"), t("footer.section6.item2")],
+    },
   ];
 
   const links = [
-    t('footer.links.faq'),
-    t('footer.links.search'),
-    t('footer.links.track'),
-    t('footer.links.useful'),
-    t('footer.links.contact'),
+    t("footer.links.faq"),
+    t("footer.links.search"),
+    t("footer.links.track"),
+    t("footer.links.useful"),
+    t("footer.links.contact"),
   ];
 
   return (
@@ -33,7 +44,8 @@ export default function Footer() {
         backgroundColor: "#002b5c",
         color: "#fff",
         padding: "20px 0",
-        left: '0', right: '0'
+        left: "0",
+        right: "0",
       }}
     >
       <Grid
@@ -52,6 +64,8 @@ export default function Footer() {
             />
             <Box display="flex" justifyContent="center" mt={1}>
               <IconButton
+                href="https://www.facebook.com/CCTUNISIE/"
+                target="_blank"
                 sx={{
                   color: "white",
                   marginRight: "10px",
@@ -61,6 +75,8 @@ export default function Footer() {
                 <FacebookIcon />
               </IconButton>
               <IconButton
+                href="https://www.youtube.com/channel/UClKA5p9h3HeskMJdPGS_KbQ"
+                target="_blank"
                 sx={{
                   color: "white",
                   marginRight: "10px",
