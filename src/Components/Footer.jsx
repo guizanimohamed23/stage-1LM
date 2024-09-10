@@ -70,6 +70,7 @@ export default function Footer() {
                   color: "white",
                   marginRight: "10px",
                   fontSize: "1.2rem",
+                  "&:hover": { color: "#1877F2" }, // Corrected hover syntax
                 }}
               >
                 <FacebookIcon />
@@ -81,11 +82,18 @@ export default function Footer() {
                   color: "white",
                   marginRight: "10px",
                   fontSize: "1.2rem",
+                  "&:hover": { color: "#FF0000" },
                 }}
               >
                 <YouTubeIcon />
               </IconButton>
-              <IconButton sx={{ color: "white", fontSize: "1.2rem" }}>
+              <IconButton
+                sx={{
+                  color: "white",
+                  fontSize: "1.2rem",
+                  "&:hover": { color: "#CEC9C9" },
+                }}
+              >
                 <EmailIcon />
               </IconButton>
             </Box>

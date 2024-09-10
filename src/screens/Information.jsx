@@ -1,5 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, TextField, Typography, Divider } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  Divider,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -319,6 +332,162 @@ function Information() {
           </Grid>
         </Grid>
       </Box>
+      <Box
+        sx={{
+          display: "inline-block",
+          padding: "10px",
+          transition: "box-shadow 1s ease",
+          borderRadius: "20px",
+          marginTop: "2rem",
+        }}
+      ></Box>
+
+      <TableContainer
+        component={Paper}
+        sx={{
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+          borderRadius: "8px",
+          overflow: "hidden",
+        }}
+      >
+        <Table
+          sx={{
+            minWidth: 650,
+            borderCollapse: "separate",
+            borderSpacing: "0",
+            border: "2px solid #1A4870",
+            "& .MuiTableCell-root": {
+              borderBottom: "2px solid #1A4870", // Global border for all cells
+              borderRight: "2px solid #1A4870", // Add vertical borders
+            },
+          }}
+          aria-label="information table"
+        >
+          <TableHead>
+            <TableRow>
+              <TableCell
+                colSpan={6}
+                sx={{
+                  backgroundColor: "#1A4870",
+                  color: "#fff",
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  fontSize: "16px",
+                  padding: "12px",
+                  borderTopLeftRadius: "8px",
+                  borderTopRightRadius: "8px",
+                }}
+              >
+                RESPONSABLE DE L'ACCÈS À L'INFORMATION
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: "12px",
+                }}
+              >
+                Nom et Prénom
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: "12px",
+                }}
+              >
+                Rang
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: "12px",
+                }}
+              >
+                Plan de Carrière
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: "12px",
+                }}
+              >
+                E-mail Professionnel
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: "12px",
+                }}
+              >
+                Numéro de Téléphone
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2 ",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: "12px",
+                }}
+              >
+                Fax
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                Cheikh Rouhou Mohamed
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                Inspecteur Général Du Contrôle Economique
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                Décision Générale
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                Mohamed.Cheikhrouhou@Cct.Gov.Tn
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                96661328
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                71961953
+              </TableCell>
+            </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                Khalil Mohamed Tawfiq
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                Avocat Général Des Prisons Et Services Correctionnels
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                L'écrivain Amer
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                Daaf@Cct.Gov.Tn
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                96661328
+              </TableCell>
+              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
+                71961953
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
 
       <Footer />
     </Box>
