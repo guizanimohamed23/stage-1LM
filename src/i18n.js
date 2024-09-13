@@ -8,8 +8,8 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'fr', // default language
-    lng: 'fr', // start with French
+    fallbackLng: 'ar', // default language
+    lng: 'ar', // start with French
     backend: {
       loadPath: '/Locales/{{lng}}/translation.json', // Path to the translation files
     },

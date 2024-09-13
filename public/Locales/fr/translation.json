@@ -97,6 +97,81 @@
         "label": "Goč, Serbia"
       }
     ]
+  },
+  "council_activities":"activité du conseil",
+  "advisory_role": {
+    "title": "Rôle Consultatif",
+    "sections": {
+      "consultation_mandatory": {
+        "title": "Consultation obligatoire",
+        "content": [
+          "1- Domaines de compétences :",
+          "* les projets de textes réglementaires tendant à imposer des conditions particulières régissant les activités économiques",
+          "* Les projets de concentration",
+          "* Exonération de certaines pratiques au sens de l’article 6 de la loi sur la concurrence",
+          "1-2 Qui doit saisir le Conseil :",
+          "* le ministre chargé du commerce"
+        ]
+      },
+      "consultation_optional": {
+        "title": "Consultation facultative",
+        "content": [
+          "2-1 Domaine de compétences :",
+          "* les projets de textes législatifs et toutes les questions qui touchent la concurrence.",
+          "* Qui peut saisir le Conseil ? le ministre chargé du commerce.",
+          "2-2 domaine de compétences :",
+          "* l’avis du Conseil sur les questions de concurrence"
+        ]
+      },
+      "who_can_request_opinion": {
+        "title": "Qui peut requérir cet avis ?",
+        "content": [
+          "* les organismes ou groupements de consommateurs légalement établis",
+          "* les organisations professionnelles ou syndicales",
+          "* les chambres de commerce et d’industrie",
+          "* les Autorités de régulation",
+          "Et ce par l’intermédiaire du ministre du Commerce ."
+        ]
+      }
+    }
+  },
+  "jurisdictional_role": {
+    "title": "Rôle Juridictionnel",
+    "sections": {
+      "anti_competitive_practices": {
+        "title": "Pratiques anti-concurrentielles",
+        "content": [
+          "1- Actions concertées, les collusions et les ententes expresses ou tacites ayant un effet ou objet anti-concurrentiel",
+          "2- Exploitation abusive d’une position dominante",
+          "3- Exploitation abusive d’un état de dépendance économique",
+          "4- Pratique de prix abusivement bas"
+        ]
+      },
+      "who_can_notify_council_judicial": {
+        "title": "Qui peut saisir le conseil concernant le volet juridictionnel ?",
+        "content": [
+          "1- Auto saisine",
+          "2- Ministre du Commerce",
+          "3- Les entreprises économiques",
+          "4- Organisations professionnelles et syndicales",
+          "5- Organismes et groupements de consommateur légalement établis",
+          "6- Chambres de commerce et d’industrie",
+          "7- Autorités de régulation",
+          "8- Les collectivités locales"
+        ]
+      }
+    }
+  },
+  "legal_texts": {
+    "title": "Textes Juridiques de Référence",
+    "content": [
+      "1 Loi n° 2015-36 du 15 septembre 2015, relative à la réorganisation de la concurrence et des prix.",
+      "2 Décret n° 2006-477 du 15 février 2006, fixant les modalités d’organisation administrative et financière et de fonctionnement du conseil de la concurrence."
+    ]
+  },
+  "related_articles": {
+    "title": "Articles en Relations",
+    "content": []
   }
   }
   
