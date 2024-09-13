@@ -1,44 +1,46 @@
-<<<<<<< Updated upstream
-import React, { useState, useEffect } from "react";
-import {
-  Box,
-  Button,
-  TextField,
-  Typography,
-  Divider,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-} from "@mui/material";
-=======
 import { useState, useEffect } from "react";
-import { Box, Button, TextField, Typography, Divider } from "@mui/material";
->>>>>>> Stashed changes
+import { Box, Button, TextField, Typography, Divider, TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import Grid from "@mui/material/Grid2";
-import cover from "/image 3.png";
-import Fade from "@mui/material/Fade";
 import DownloadIcon from "@mui/icons-material/Download";
+import Fade from "@mui/material/Fade";
+import { useTranslation } from "react-i18next";
+import cover from "/image 3.png";
 
 function Information() {
   const [fadeIn, setFadeIn] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setFadeIn(true);
   }, []);
 
+  const data = [
+    {
+      name: t('person1.name'),
+      rank: t('person1.rank'),
+      career: t('person1.career'),
+      email: t('person1.email'),
+      phone: t('person1.phone'),
+      fax: t('person1.fax'),
+    },
+    {
+      name: t('person2.name'),
+      rank: t('person2.rank'),
+      career: t('person2.career'),
+      email: t('person2.email'),
+      phone: t('person2.phone'),
+      fax: t('person2.fax'),
+    },
+  ];
+
+
   return (
     <Box sx={{ overflowX: "hidden" }}>
-      {/* Navbar Component */}
       <Navbar />
 
-      {/* Main Content */}
       <Fade in={fadeIn} timeout={1000}>
         <Box
           sx={{
@@ -51,7 +53,7 @@ function Information() {
           <Box
             borderRadius={"1rem"}
             padding={"2rem"}
-            width={{ xs: "90%", sm: "80%", md: "70%" }} // Responsive width
+            width={{ xs: "90%", sm: "80%", md: "70%" }}
           >
             <Grid container spacing={2}>
               <Grid item xs={12}>
@@ -71,9 +73,7 @@ function Information() {
                       fontWeight: "bold",
                     }}
                   >
-                    LE DROIT D'ACCÈS À L'INFORMATION (DAI) EST UN DROIT
-                    FONDAMENTAL DE L'INDIVIDU ET DE LA COLLECTIVITÉ QUI EST
-                    ASSURÉ PAR LA :
+                    {t("informationTitle")}
                   </Typography>
 
                   <Divider
@@ -101,10 +101,7 @@ function Information() {
                             fontSize: "1.1rem",
                           }}
                         >
-                          Décret-loi n°41 du 26 mai 2011, relatif à l’accès aux
-                          documents administratifs des organismes publics,
-                          modifié et complété par le décret-loi n° 2011-54 du 11
-                          juin 2011.
+                          {t("decree1")}
                         </Typography>
                       </Box>
                     </Grid>
@@ -123,8 +120,7 @@ function Information() {
                             fontSize: "1.1rem",
                           }}
                         >
-                          Loi organique n° 2016-22 du 24 mars 2016, relative au
-                          droit d’accès à l’information.
+                          {t("decree2")}
                         </Typography>
                       </Box>
                     </Grid>
@@ -139,9 +135,7 @@ function Information() {
                             fontSize: "1.1rem",
                           }}
                         >
-                          La Constitution du 27 Janvier 2014 Art. 32 : L’État
-                          garantit le droit à l’information et le droit d’accès
-                          à l’information.
+                          {t("constitution")}
                         </Typography>
                       </Box>
                     </Grid>
@@ -165,8 +159,7 @@ function Information() {
                       fontSize: "20px",
                     }}
                   >
-                    AU SENS DE LA PRÉSENTE LOI EN ENTEND PAR LES TERMES SUIVANTS
-                    :
+                    {t("legalTermsTitle")}
                   </Typography>
                   <Divider
                     sx={{
@@ -192,9 +185,7 @@ function Information() {
                             fontSize: "1.1rem",
                           }}
                         >
-                          L'accès à l'information : la publication proactive de
-                          l'information par l'organisme concerné et le droit d'y
-                          accéder sur demande.
+                          {t("accessToInfo")}
                         </Typography>
                       </Box>
                     </Grid>
@@ -213,11 +204,7 @@ function Information() {
                             fontSize: "1.1rem",
                           }}
                         >
-                          Information : toute information enregistrée quelque
-                          soit sa date, sa forme et son support, produite ou
-                          obtenue par les organismes soumis aux dispositions de
-                          la présente loi dans le cadre de l'exercice de leurs
-                          activités.
+                          {t("infoDefinition")}
                         </Typography>
                       </Box>
                     </Grid>
@@ -232,9 +219,7 @@ function Information() {
                             fontSize: "1.1rem",
                           }}
                         >
-                          Le tiers : toute personne physique ou morale autre que
-                          l'organisme concerné détenteur de l'information et le
-                          demandeur d'accès à l'information.
+                          {t("thirdParty")}
                         </Typography>
                       </Box>
                     </Grid>
@@ -246,7 +231,6 @@ function Information() {
         </Box>
       </Fade>
 
-      {/* Background Box with Text Input and Button */}
       <Box
         sx={{
           backgroundImage: `url(${cover})`,
@@ -267,10 +251,10 @@ function Information() {
           <Grid item xs={12} md={6}>
             <Box sx={{ maxWidth: "400px", width: "100%" }}>
               <Typography variant="h4" color="#EABA2B">
-                Suivi de la demande
+                {t("followRequestTitle")}
               </Typography>
               <Typography variant="h6" sx={{ mb: 2 }} color="white">
-                Pour suivre votre demande, veuillez introduire la référence
+                {t("followRequestDescription")}
               </Typography>
               <Box position="relative">
                 <TextField
@@ -278,18 +262,16 @@ function Information() {
                   label="Number"
                   sx={{
                     width: "100%",
-                    borderRadius: "10px", // Adjust the border radius
-
-                    borderWidth: "2px", // Border width for the fieldset
-                    borderRadius: "10px", // Border radius for the fieldset
+                    borderRadius: "10px",
+                    borderWidth: "2px",
                     backgroundColor: "white",
                   }}
                 />
                 <Button
                   variant="outlined"
                   sx={{
-                    color: "white", // Text color
-                    borderWidth: "2px", // Border width
+                    color: "white",
+                    borderWidth: "2px",
                     borderColor: "white",
                     backgroundColor: "#1291FF",
                     position: "relative",
@@ -298,11 +280,11 @@ function Information() {
                     height: "100%",
                     borderRadius: "10px",
                     "&:hover": {
-                      backgroundColor: "#105EA3", // Background color on hover
+                      backgroundColor: "#105EA3",
                     },
                   }}
                 >
-                  Submit
+                  {t("submitButton")}
                 </Button>
               </Box>
             </Box>
@@ -330,12 +312,12 @@ function Information() {
                 color: "White",
               }}
             >
-              Demande d’accès à l’information
+              {t("accessInfoButton")}
               <Box
                 sx={{
-                  backgroundColor: "#1A4870", // Dark background color
-                  borderRadius: "50%", // Circle shape
-                  padding: "5px", // Spacing around the icon
+                  backgroundColor: "#1A4870",
+                  borderRadius: "50%",
+                  padding: "5px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -355,12 +337,12 @@ function Information() {
                 color: "White",
               }}
             >
-              Demande de griff
+              {t("appealButton")}
               <Box
                 sx={{
-                  backgroundColor: "#1A4870", // Dark background color
-                  borderRadius: "50%", // Circle shape
-                  padding: "5px", // Spacing around the icon
+                  backgroundColor: "#1A4870",
+                  borderRadius: "50%",
+                  padding: "5px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -373,118 +355,144 @@ function Information() {
           </Grid>
         </Grid>
       </Box>
-      <Box
-        sx={{
-          display: "inline-block",
-          padding: "10px",
-          transition: "box-shadow 1s ease",
-          borderRadius: "20px",
-          marginTop: "2rem",
-        }}
-      ></Box>
 
       <TableContainer
-        component={Paper}
+      component={Paper}
+      sx={{
+        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+        borderRadius: "8px",
+        overflowX: "auto",
+        maxWidth: "100%",
+      }}
+    >
+      <Table
         sx={{
-          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-          borderRadius: "8px",
-          overflowX: "auto", // Allow horizontal scrolling on small screens
-          maxWidth: "100%", // Ensure the container fits within its parent
+          minWidth: 650,
+          borderCollapse: "separate",
+          borderSpacing: "0",
+          border: "2px solid #1A4870",
+          "& .MuiTableCell-root": {
+            borderBottom: "2px solid #1A4870",
+            borderRight: "2px solid #1A4870",
+            padding: { xs: "8px", sm: "12px" },
+            fontSize: { xs: "12px", sm: "14px" },
+          },
         }}
+        aria-label="information table"
       >
-        <Table
-          sx={{
-            minWidth: 650,
-            borderCollapse: "separate",
-            borderSpacing: "0",
-            border: "2px solid #1A4870",
-            "& .MuiTableCell-root": {
-              borderBottom: "2px solid #1A4870", // Global border for all cells
-              borderRight: "2px solid #1A4870", // Add vertical borders
-              padding: { xs: "8px", sm: "12px" }, // Adjust padding for small screens
-              fontSize: { xs: "12px", sm: "14px" }, // Smaller font size on small screens
-            },
-          }}
-          aria-label="information table"
-        >
-          <TableHead>
-            <TableRow>
-              <TableCell
-                colSpan={6}
-                sx={{
-                  backgroundColor: "#1A4870",
-                  color: "#fff",
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  fontSize: { xs: "14px", sm: "16px" }, // Responsive font size
-                  padding: { xs: "10px", sm: "12px" },
-                  borderTopLeftRadius: "8px",
-                  borderTopRightRadius: "8px",
-                }}
-              >
-                RESPONSABLE DE L'ACCÈS À L'INFORMATION
+        <TableHead>
+          <TableRow>
+            <TableCell
+              colSpan={6}
+              sx={{
+                backgroundColor: "#1A4870",
+                color: "#fff",
+                textAlign: "center",
+                fontWeight: "bold",
+                fontSize: { xs: "14px", sm: "16px" },
+                padding: { xs: "10px", sm: "12px" },
+                borderTopLeftRadius: "8px",
+                borderTopRightRadius: "8px",
+              }}
+            >
+              {t('responsibleTitle')}
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell
+              sx={{
+                backgroundColor: "#5B99C2",
+                color: "#fff",
+                fontWeight: "bold",
+                padding: { xs: "8px", sm: "12px" },
+                fontSize: { xs: "12px", sm: "14px" },
+              }}
+            >
+              {t('nameHeader')}
+            </TableCell>
+            <TableCell
+              sx={{
+                backgroundColor: "#5B99C2",
+                color: "#fff",
+                fontWeight: "bold",
+                padding: { xs: "8px", sm: "12px" },
+                fontSize: { xs: "12px", sm: "14px" },
+              }}
+            >
+              {t('rankHeader')}
+            </TableCell>
+            <TableCell
+              sx={{
+                backgroundColor: "#5B99C2",
+                color: "#fff",
+                fontWeight: "bold",
+                padding: { xs: "8px", sm: "12px" },
+                fontSize: { xs: "12px", sm: "14px" },
+              }}
+            >
+              {t('careerHeader')}
+            </TableCell>
+            <TableCell
+              sx={{
+                backgroundColor: "#5B99C2",
+                color: "#fff",
+                fontWeight: "bold",
+                padding: { xs: "8px", sm: "12px" },
+                fontSize: { xs: "12px", sm: "14px" },
+              }}
+            >
+              {t('emailHeader')}
+            </TableCell>
+            <TableCell
+              sx={{
+                backgroundColor: "#5B99C2",
+                color: "#fff",
+                fontWeight: "bold",
+                padding: { xs: "8px", sm: "12px" },
+                fontSize: { xs: "12px", sm: "14px" },
+              }}
+            >
+              {t('phoneHeader')}
+            </TableCell>
+            <TableCell
+              sx={{
+                backgroundColor: "#5B99C2",
+                color: "#fff",
+                fontWeight: "bold",
+                padding: { xs: "8px", sm: "12px" },
+                fontSize: { xs: "12px", sm: "14px" },
+              }}
+            >
+              {t('faxHeader')}
+            </TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((person, index) => (
+            <TableRow key={index} sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
+                {person.name}
+              </TableCell>
+              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
+                {person.rank}
+              </TableCell>
+              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
+                {person.career}
+              </TableCell>
+              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
+                {person.email}
+              </TableCell>
+              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
+                {person.phone}
+              </TableCell>
+              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
+                {person.fax}
               </TableCell>
             </TableRow>
-            <TableRow>
-              {[
-                "Nom et Prénom",
-                "Rang",
-                "Plan de Carrière",
-                "E-mail Professionnel",
-                "Numéro de Téléphone",
-                "Fax",
-              ].map((header) => (
-                <TableCell
-                  key={header}
-                  sx={{
-                    backgroundColor: "#5B99C2",
-                    color: "#fff",
-                    fontWeight: "bold",
-                    padding: { xs: "8px", sm: "12px" }, // Adjust padding for small screens
-                    fontSize: { xs: "12px", sm: "14px" }, // Responsive font size
-                  }}
-                >
-                  {header}
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {[
-              {
-                name: "Cheikh Rouhou Mohamed",
-                rank: "Inspecteur Général Du Contrôle Economique",
-                career: "Décision Générale",
-                email: "Mohamed.Cheikhrouhou@Cct.Gov.Tn",
-                phone: "96661328",
-                fax: "71961953",
-              },
-              {
-                name: "Khalil Mohamed Tawfiq",
-                rank: "Avocat Général Des Prisons Et Services Correctionnels",
-                career: "L'écrivain Amer",
-                email: "Daaf@Cct.Gov.Tn",
-                phone: "96661328",
-                fax: "71961953",
-              },
-            ].map((row, index) => (
-              <TableRow key={index} sx={{ backgroundColor: "#D4E6F1" }}>
-                {Object.values(row).map((cell, i) => (
-                  <TableCell
-                    key={i}
-                    sx={{
-                      padding: { xs: "8px", sm: "12px" },
-                      border: "1px solid #ddd",
-                    }}
-                  >
-                    {cell}
-                  </TableCell>
-                ))}
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
 
       <Footer />
     </Box>
