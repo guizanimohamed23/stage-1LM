@@ -19,6 +19,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Grid from "@mui/material/Grid2";
 import cover from "/image 3.png";
 import Fade from "@mui/material/Fade";
+import DownloadIcon from "@mui/icons-material/Download";
 
 function Information() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -315,19 +316,54 @@ function Information() {
             }}
           >
             <Button
-              variant="contained"
-              sx={{ left: "90px" }}
-              onClick={() => {
-                window.open(
-                  "/src/assets/مطلب-نفاذ-الى-المعلومة-هيئة-النفاذ-الى-المعلومة-3.pdf",
-                  "_blank"
-                );
+              variant="outlined"
+              sx={{
+                left: "90px",
+                backgroundColor: "transparent",
+                borderColor: "White",
+                borderRadius: "20px",
+                color: "White",
               }}
             >
               Demande d’accès à l’information
+              <Box
+                sx={{
+                  backgroundColor: "#1A4870", // Dark background color
+                  borderRadius: "50%", // Circle shape
+                  padding: "5px", // Spacing around the icon
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginLeft: "30px",
+                }}
+              >
+                <DownloadIcon sx={{ color: "#EABA2B", fontSize: "20px" }} />
+              </Box>
             </Button>
-            <Button variant="contained" sx={{ left: "90px" }}>
+            <Button
+              variant="outlined"
+              sx={{
+                left: "90px",
+                backgroundColor: "transparent",
+                borderColor: "White",
+                borderRadius: "20px",
+                color: "White",
+              }}
+            >
               Demande de griff
+              <Box
+                sx={{
+                  backgroundColor: "#1A4870", // Dark background color
+                  borderRadius: "50%", // Circle shape
+                  padding: "5px", // Spacing around the icon
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginLeft: "30px",
+                }}
+              >
+                <DownloadIcon sx={{ color: "#EABA2B", fontSize: "20px" }} />
+              </Box>
             </Button>
           </Grid>
         </Grid>
@@ -347,7 +383,8 @@ function Information() {
         sx={{
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           borderRadius: "8px",
-          overflow: "hidden",
+          overflowX: "auto", // Allow horizontal scrolling on small screens
+          maxWidth: "100%", // Ensure the container fits within its parent
         }}
       >
         <Table
@@ -359,6 +396,8 @@ function Information() {
             "& .MuiTableCell-root": {
               borderBottom: "2px solid #1A4870", // Global border for all cells
               borderRight: "2px solid #1A4870", // Add vertical borders
+              padding: { xs: "8px", sm: "12px" }, // Adjust padding for small screens
+              fontSize: { xs: "12px", sm: "14px" }, // Smaller font size on small screens
             },
           }}
           aria-label="information table"
@@ -372,8 +411,8 @@ function Information() {
                   color: "#fff",
                   textAlign: "center",
                   fontWeight: "bold",
-                  fontSize: "16px",
-                  padding: "12px",
+                  fontSize: { xs: "14px", sm: "16px" }, // Responsive font size
+                  padding: { xs: "10px", sm: "12px" },
                   borderTopLeftRadius: "8px",
                   borderTopRightRadius: "8px",
                 }}
@@ -382,109 +421,62 @@ function Information() {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell
-                sx={{
-                  backgroundColor: "#5B99C2",
-                  color: "#fff",
-                  fontWeight: "bold",
-                  padding: "12px",
-                }}
-              >
-                Nom et Prénom
-              </TableCell>
-              <TableCell
-                sx={{
-                  backgroundColor: "#5B99C2",
-                  color: "#fff",
-                  fontWeight: "bold",
-                  padding: "12px",
-                }}
-              >
-                Rang
-              </TableCell>
-              <TableCell
-                sx={{
-                  backgroundColor: "#5B99C2",
-                  color: "#fff",
-                  fontWeight: "bold",
-                  padding: "12px",
-                }}
-              >
-                Plan de Carrière
-              </TableCell>
-              <TableCell
-                sx={{
-                  backgroundColor: "#5B99C2",
-                  color: "#fff",
-                  fontWeight: "bold",
-                  padding: "12px",
-                }}
-              >
-                E-mail Professionnel
-              </TableCell>
-              <TableCell
-                sx={{
-                  backgroundColor: "#5B99C2",
-                  color: "#fff",
-                  fontWeight: "bold",
-                  padding: "12px",
-                }}
-              >
-                Numéro de Téléphone
-              </TableCell>
-              <TableCell
-                sx={{
-                  backgroundColor: "#5B99C2 ",
-                  color: "#fff",
-                  fontWeight: "bold",
-                  padding: "12px",
-                }}
-              >
-                Fax
-              </TableCell>
+              {[
+                "Nom et Prénom",
+                "Rang",
+                "Plan de Carrière",
+                "E-mail Professionnel",
+                "Numéro de Téléphone",
+                "Fax",
+              ].map((header) => (
+                <TableCell
+                  key={header}
+                  sx={{
+                    backgroundColor: "#5B99C2",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    padding: { xs: "8px", sm: "12px" }, // Adjust padding for small screens
+                    fontSize: { xs: "12px", sm: "14px" }, // Responsive font size
+                  }}
+                >
+                  {header}
+                </TableCell>
+              ))}
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                Cheikh Rouhou Mohamed
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                Inspecteur Général Du Contrôle Economique
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                Décision Générale
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                Mohamed.Cheikhrouhou@Cct.Gov.Tn
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                96661328
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                71961953
-              </TableCell>
-            </TableRow>
-            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                Khalil Mohamed Tawfiq
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                Avocat Général Des Prisons Et Services Correctionnels
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                L'écrivain Amer
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                Daaf@Cct.Gov.Tn
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                96661328
-              </TableCell>
-              <TableCell sx={{ padding: "12px", border: "1px solid #ddd" }}>
-                71961953
-              </TableCell>
-            </TableRow>
+            {[
+              {
+                name: "Cheikh Rouhou Mohamed",
+                rank: "Inspecteur Général Du Contrôle Economique",
+                career: "Décision Générale",
+                email: "Mohamed.Cheikhrouhou@Cct.Gov.Tn",
+                phone: "96661328",
+                fax: "71961953",
+              },
+              {
+                name: "Khalil Mohamed Tawfiq",
+                rank: "Avocat Général Des Prisons Et Services Correctionnels",
+                career: "L'écrivain Amer",
+                email: "Daaf@Cct.Gov.Tn",
+                phone: "96661328",
+                fax: "71961953",
+              },
+            ].map((row, index) => (
+              <TableRow key={index} sx={{ backgroundColor: "#D4E6F1" }}>
+                {Object.values(row).map((cell, i) => (
+                  <TableCell
+                    key={i}
+                    sx={{
+                      padding: { xs: "8px", sm: "12px" },
+                      border: "1px solid #ddd",
+                    }}
+                  >
+                    {cell}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </TableContainer>

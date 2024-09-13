@@ -7,15 +7,16 @@ import ModalComponent from "../Components/Presse/ModalComponent";
 import Grid from "@mui/material/Grid2";
 import Fade from "@mui/material/Fade";
 
-const actualiteitems = [
-  { id: 1, image: "tunisie-conseil-concurrence 2.png", title: "Card 1" },
-  { id: 2, image: "tunisie-conseil-concurrence 2.png", title: "Card 2" },
-  { id: 3, image: "tunisie-conseil-concurrence 2.png", title: "Card 3" },
-  { id: 4, image: "tunisie-conseil-concurrence 2.png", title: "Card 4" },
-  { id: 5, image: "tunisie-conseil-concurrence 2.png", title: "Card 5" },
-  { id: 6, image: "tunisie-conseil-concurrence 2.png", title: "Card 6" },
-  { id: 7, image: "tunisie-conseil-concurrence 2.png", title: "Card 7" },
-  { id: 8, image: "tunisie-conseil-concurrence 2.png", title: "Card 8" },
+// Same images for the Galerie section
+const galerieItems = [
+  { id: 1, image: "tunisie-conseil-concurrence 2.png", title: "Image 1" },
+  { id: 2, image: "tunisie-conseil-concurrence 2.png", title: "Image 2" },
+  { id: 3, image: "tunisie-conseil-concurrence 2.png", title: "Image 3" },
+  { id: 4, image: "tunisie-conseil-concurrence 2.png", title: "Image 4" },
+  { id: 5, image: "tunisie-conseil-concurrence 2.png", title: "Image 5" },
+  { id: 6, image: "tunisie-conseil-concurrence 2.png", title: "Image 6" },
+  { id: 7, image: "tunisie-conseil-concurrence 2.png", title: "Image 7" },
+  { id: 8, image: "tunisie-conseil-concurrence 2.png", title: "Image 8" },
 ];
 
 const modalData = {
@@ -46,6 +47,7 @@ function LaPresse() {
       <Navbar />
       <Fade in timeout={1000}>
         <Box>
+          {/* Actualité Section */}
           <Box sx={{ marginTop: "7rem", marginBottom: "3rem" }}>
             <Typography
               variant="h4"
@@ -72,10 +74,11 @@ function LaPresse() {
           </Box>
 
           <HorizontalScroll
-            items={actualiteitems}
+            items={galerieItems}
             onCardButtonClick={handleOpen}
           />
 
+          {/* Galerie Section */}
           <Box sx={{ marginTop: "3rem", marginBottom: "3rem" }}>
             <Typography
               variant="h4"
@@ -101,19 +104,9 @@ function LaPresse() {
             </Box>
           </Box>
 
-          <Grid>{/*PICTURES FOR THE */}</Grid>
-
           <Footer />
         </Box>
       </Fade>
-
-      {openModalId !== null && (
-        <ModalComponent
-          open={openModalId !== null}
-          handleClose={handleClose}
-          content={getModalContent(openModalId)}
-        />
-      )}
     </div>
   );
 }
