@@ -1,5 +1,18 @@
 import { useState, useEffect } from "react";
-import { Box, Button, TextField, Typography, Divider, TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  Divider,
+  TableContainer,
+  Paper,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
@@ -19,23 +32,22 @@ function Information() {
 
   const data = [
     {
-      name: t('person1.name'),
-      rank: t('person1.rank'),
-      career: t('person1.career'),
-      email: t('person1.email'),
-      phone: t('person1.phone'),
-      fax: t('person1.fax'),
+      name: t("person1.name"),
+      rank: t("person1.rank"),
+      career: t("person1.career"),
+      email: t("person1.email"),
+      phone: t("person1.phone"),
+      fax: t("person1.fax"),
     },
     {
-      name: t('person2.name'),
-      rank: t('person2.rank'),
-      career: t('person2.career'),
-      email: t('person2.email'),
-      phone: t('person2.phone'),
-      fax: t('person2.fax'),
+      name: t("person2.name"),
+      rank: t("person2.rank"),
+      career: t("person2.career"),
+      email: t("person2.email"),
+      phone: t("person2.phone"),
+      fax: t("person2.fax"),
     },
   ];
-
 
   return (
     <Box sx={{ overflowX: "hidden" }}>
@@ -237,7 +249,7 @@ function Information() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
-          maxHeight: "250px",
+          Height: "250px",
           height: "100%",
           display: "flex",
           alignItems: "center",
@@ -357,142 +369,172 @@ function Information() {
       </Box>
 
       <TableContainer
-      component={Paper}
-      sx={{
-        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-        borderRadius: "8px",
-        overflowX: "auto",
-        maxWidth: "100%",
-      }}
-    >
-      <Table
+        component={Paper}
         sx={{
-          minWidth: 650,
-          borderCollapse: "separate",
-          borderSpacing: "0",
-          border: "2px solid #1A4870",
-          "& .MuiTableCell-root": {
-            borderBottom: "2px solid #1A4870",
-            borderRight: "2px solid #1A4870",
-            padding: { xs: "8px", sm: "12px" },
-            fontSize: { xs: "12px", sm: "14px" },
-          },
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+          borderRadius: "8px",
+          overflowX: "auto",
+          maxWidth: "100%",
         }}
-        aria-label="information table"
       >
-        <TableHead>
-          <TableRow>
-            <TableCell
-              colSpan={6}
-              sx={{
-                backgroundColor: "#1A4870",
-                color: "#fff",
-                textAlign: "center",
-                fontWeight: "bold",
-                fontSize: { xs: "14px", sm: "16px" },
-                padding: { xs: "10px", sm: "12px" },
-                borderTopLeftRadius: "8px",
-                borderTopRightRadius: "8px",
-              }}
-            >
-              {t('responsibleTitle')}
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell
-              sx={{
-                backgroundColor: "#5B99C2",
-                color: "#fff",
-                fontWeight: "bold",
-                padding: { xs: "8px", sm: "12px" },
-                fontSize: { xs: "12px", sm: "14px" },
-              }}
-            >
-              {t('nameHeader')}
-            </TableCell>
-            <TableCell
-              sx={{
-                backgroundColor: "#5B99C2",
-                color: "#fff",
-                fontWeight: "bold",
-                padding: { xs: "8px", sm: "12px" },
-                fontSize: { xs: "12px", sm: "14px" },
-              }}
-            >
-              {t('rankHeader')}
-            </TableCell>
-            <TableCell
-              sx={{
-                backgroundColor: "#5B99C2",
-                color: "#fff",
-                fontWeight: "bold",
-                padding: { xs: "8px", sm: "12px" },
-                fontSize: { xs: "12px", sm: "14px" },
-              }}
-            >
-              {t('careerHeader')}
-            </TableCell>
-            <TableCell
-              sx={{
-                backgroundColor: "#5B99C2",
-                color: "#fff",
-                fontWeight: "bold",
-                padding: { xs: "8px", sm: "12px" },
-                fontSize: { xs: "12px", sm: "14px" },
-              }}
-            >
-              {t('emailHeader')}
-            </TableCell>
-            <TableCell
-              sx={{
-                backgroundColor: "#5B99C2",
-                color: "#fff",
-                fontWeight: "bold",
-                padding: { xs: "8px", sm: "12px" },
-                fontSize: { xs: "12px", sm: "14px" },
-              }}
-            >
-              {t('phoneHeader')}
-            </TableCell>
-            <TableCell
-              sx={{
-                backgroundColor: "#5B99C2",
-                color: "#fff",
-                fontWeight: "bold",
-                padding: { xs: "8px", sm: "12px" },
-                fontSize: { xs: "12px", sm: "14px" },
-              }}
-            >
-              {t('faxHeader')}
-            </TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((person, index) => (
-            <TableRow key={index} sx={{ backgroundColor: "#D4E6F1" }}>
-              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
-                {person.name}
-              </TableCell>
-              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
-                {person.rank}
-              </TableCell>
-              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
-                {person.career}
-              </TableCell>
-              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
-                {person.email}
-              </TableCell>
-              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
-                {person.phone}
-              </TableCell>
-              <TableCell sx={{ padding: { xs: "8px", sm: "12px" }, border: "1px solid #ddd" }}>
-                {person.fax}
+        <Table
+          sx={{
+            minWidth: 650,
+            borderCollapse: "separate",
+            borderSpacing: "0",
+            border: "2px solid #1A4870",
+            "& .MuiTableCell-root": {
+              borderBottom: "2px solid #1A4870",
+              borderRight: "2px solid #1A4870",
+              padding: { xs: "8px", sm: "12px" },
+              fontSize: { xs: "12px", sm: "14px" },
+            },
+          }}
+          aria-label="information table"
+        >
+          <TableHead>
+            <TableRow>
+              <TableCell
+                colSpan={6}
+                sx={{
+                  backgroundColor: "#1A4870",
+                  color: "#fff",
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  fontSize: { xs: "14px", sm: "16px" },
+                  padding: { xs: "10px", sm: "12px" },
+                  borderTopLeftRadius: "8px",
+                  borderTopRightRadius: "8px",
+                }}
+              >
+                {t("responsibleTitle")}
               </TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+            <TableRow>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: { xs: "8px", sm: "12px" },
+                  fontSize: { xs: "12px", sm: "14px" },
+                }}
+              >
+                {t("nameHeader")}
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: { xs: "8px", sm: "12px" },
+                  fontSize: { xs: "12px", sm: "14px" },
+                }}
+              >
+                {t("rankHeader")}
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: { xs: "8px", sm: "12px" },
+                  fontSize: { xs: "12px", sm: "14px" },
+                }}
+              >
+                {t("careerHeader")}
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: { xs: "8px", sm: "12px" },
+                  fontSize: { xs: "12px", sm: "14px" },
+                }}
+              >
+                {t("emailHeader")}
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: { xs: "8px", sm: "12px" },
+                  fontSize: { xs: "12px", sm: "14px" },
+                }}
+              >
+                {t("phoneHeader")}
+              </TableCell>
+              <TableCell
+                sx={{
+                  backgroundColor: "#5B99C2",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  padding: { xs: "8px", sm: "12px" },
+                  fontSize: { xs: "12px", sm: "14px" },
+                }}
+              >
+                {t("faxHeader")}
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data.map((person, index) => (
+              <TableRow key={index} sx={{ backgroundColor: "#D4E6F1" }}>
+                <TableCell
+                  sx={{
+                    padding: { xs: "8px", sm: "12px" },
+                    border: "1px solid #ddd",
+                  }}
+                >
+                  {person.name}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    padding: { xs: "8px", sm: "12px" },
+                    border: "1px solid #ddd",
+                  }}
+                >
+                  {person.rank}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    padding: { xs: "8px", sm: "12px" },
+                    border: "1px solid #ddd",
+                  }}
+                >
+                  {person.career}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    padding: { xs: "8px", sm: "12px" },
+                    border: "1px solid #ddd",
+                  }}
+                >
+                  {person.email}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    padding: { xs: "8px", sm: "12px" },
+                    border: "1px solid #ddd",
+                  }}
+                >
+                  {person.phone}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    padding: { xs: "8px", sm: "12px" },
+                    border: "1px solid #ddd",
+                  }}
+                >
+                  {person.fax}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
 
       <Footer />
     </Box>
