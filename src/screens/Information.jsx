@@ -237,7 +237,7 @@ function Information() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
-          height: "250px",
+          maxHeight: "250px",
           height: "100%",
           display: "flex",
           alignItems: "center",
