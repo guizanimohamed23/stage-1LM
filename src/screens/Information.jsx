@@ -21,6 +21,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import Fade from "@mui/material/Fade";
 import { useTranslation } from "react-i18next";
 import cover from "/image 3.png";
+import { InputAdornment } from "@mui/material"; // Import InputAdornment
 
 function Information() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -262,7 +263,12 @@ function Information() {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <Box sx={{ maxWidth: "400px", width: "100%" }}>
-              <Typography variant="h4" color="#EABA2B">
+              <Typography
+                variant="h3"
+                color="#EABA2B"
+                fontWeight="700"
+                maxWidth="rem"
+              >
                 {t("followRequestTitle")}
               </Typography>
               <Typography variant="h6" sx={{ mb: 2 }} color="white">
@@ -278,26 +284,29 @@ function Information() {
                     borderWidth: "2px",
                     backgroundColor: "white",
                   }}
-                />
-                <Button
-                  variant="outlined"
-                  sx={{
-                    color: "white",
-                    borderWidth: "2px",
-                    borderColor: "white",
-                    backgroundColor: "#1291FF",
-                    position: "relative",
-                    right: 0,
-                    top: 0,
-                    height: "100%",
-                    borderRadius: "10px",
-                    "&:hover": {
-                      backgroundColor: "#105EA3",
-                    },
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <Button
+                          variant="outlined"
+                          sx={{
+                            color: "white",
+                            borderWidth: "2px",
+                            borderColor: "white",
+                            backgroundColor: "#1291FF",
+                            height: "100%",
+                            borderRadius: "10px",
+                            "&:hover": {
+                              backgroundColor: "#105EA3",
+                            },
+                          }}
+                        >
+                          {t("submitButton")}
+                        </Button>
+                      </InputAdornment>
+                    ),
                   }}
-                >
-                  {t("submitButton")}
-                </Button>
+                />
               </Box>
             </Box>
           </Grid>
@@ -374,7 +383,11 @@ function Information() {
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           borderRadius: "8px",
           overflowX: "auto",
-          maxWidth: "100%",
+          maxWidth: "80%",
+          marginTop: "3rem",
+          marginBottom: "3rem",
+          marginLeft: "auto",
+          marginRight: "auto",
         }}
       >
         <Table
@@ -383,6 +396,7 @@ function Information() {
             borderCollapse: "separate",
             borderSpacing: "0",
             border: "2px solid #1A4870",
+
             "& .MuiTableCell-root": {
               borderBottom: "2px solid #1A4870",
               borderRight: "2px solid #1A4870",
