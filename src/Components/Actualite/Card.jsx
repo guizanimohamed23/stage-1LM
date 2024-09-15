@@ -14,12 +14,9 @@ function Cards({ image, title, description, date, onButtonClick }) {
         minWidth: 345,
         maxWidth: 345,
         marginTop: "5rem",
-        minHeight: "225px",
-        bgcolor: "#EAEEF0",
         borderRadius: ".7rem",
         minHeight: "225px",
         bgcolor: "#EAEEF0",
-        borderRadius: ".7rem",
         transition: "transform 0.3s ease-in-out",
         "&:hover": {
           transform: "scale(1.05)",
