@@ -12,10 +12,10 @@ import { useTranslation } from 'react-i18next';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const imagePaths = [
-  'http://cct.digit-r-consulting.com/wp-content/uploads/2023/05/comesa-1-1-768x577.jpg',
-  'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-  'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
-  'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+  'imgs/image info.png',
+  'imgs/images.jpeg',
+  'imgs/images.jpeg',
+  'imgs/images.jpeg',
 ];
 
 function NewsCarousel() {

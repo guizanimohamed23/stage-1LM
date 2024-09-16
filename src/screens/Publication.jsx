@@ -6,10 +6,11 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import Grid from "@mui/material/Grid";
 import ArticleIcon from "@mui/icons-material/Article";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
+import BarChartIcon from "@mui/icons-material/BarChart";
 
 function Publication() {
   const [openAvis, setOpenAvis] = React.useState(false);
@@ -38,162 +39,181 @@ function Publication() {
     <>
       <Navbar />
       <div>
-        <Box
+        <Grid
+          container
+          spacing={4}
           sx={{
-            display: "flex",
             justifyContent: "center",
-            gap: "2rem", // Add space between the boxes
             marginTop: "10rem",
             marginBottom: "8rem",
-            flexWrap: "wrap",
           }}
         >
           {/* AVIS Box */}
-          <Box
-            sx={{
-              backgroundColor: "#1A4870",
-              color: "white",
-              padding: 2,
-              textAlign: "center",
-              borderRadius: 2,
-              width: "300px",
-              height: "300px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: "20px",
-              cursor: "pointer",
-            }}
-            onClick={handleOpenAvis}
-          >
-            <BorderColorIcon
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
               sx={{
-                fontSize: "80px",
+                backgroundColor: "#1A4870",
                 color: "white",
+                padding: 2,
+                textAlign: "center",
+                borderRadius: 2,
+                height: "300px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "20px",
+                cursor: "pointer",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)",
+                },
               }}
-            />
-            <Typography
-              sx={{
-                fontSize: "36px",
-                fontWeight: "bold",
-                color: "#FFCF40",
-                marginTop: "1rem",
-              }}
+              onClick={handleOpenAvis}
             >
-              AVIS
-            </Typography>
-          </Box>
+              <BorderColorIcon
+                sx={{
+                  fontSize: "80px",
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  color: "#FFCF40",
+                  marginTop: "1rem",
+                }}
+              >
+                AVIS
+              </Typography>
+            </Box>
+          </Grid>
 
           {/* DECISION Box */}
-          <Box
-            sx={{
-              backgroundColor: "#1A4870",
-              color: "white",
-              padding: 2,
-              textAlign: "center",
-              borderRadius: 2,
-              width: "300px",
-              height: "300px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: "20px",
-              cursor: "pointer",
-            }}
-            onClick={handleOpenDecision}
-          >
-            <ArticleIcon
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
               sx={{
-                fontSize: "80px",
+                backgroundColor: "#1A4870",
                 color: "white",
+                padding: 2,
+                textAlign: "center",
+                borderRadius: 2,
+                height: "300px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "20px",
+                cursor: "pointer",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)",
+                },
               }}
-            />
-            <Typography
-              sx={{
-                fontSize: "36px",
-                fontWeight: "bold",
-                color: "#FFCF40",
-                marginTop: "1rem",
-              }}
+              onClick={handleOpenDecision}
             >
-              DECISION
-            </Typography>
-          </Box>
+              <AutoStoriesIcon
+                sx={{
+                  fontSize: "80px",
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  color: "#FFCF40",
+                  marginTop: "1rem",
+                }}
+              >
+                DECISION
+              </Typography>
+            </Box>
+          </Grid>
 
           {/* RAPPORT ANNUEL Box */}
-          <Box
-            sx={{
-              backgroundColor: "#1A4870",
-              color: "white",
-              padding: 2,
-              textAlign: "center",
-              borderRadius: 2,
-              width: "300px",
-              height: "300px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: "20px",
-              cursor: "pointer",
-            }}
-          >
-            <BarChartIcon
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
               sx={{
-                fontSize: "80px",
+                backgroundColor: "#1A4870",
                 color: "white",
-              }}
-            />
-            <Typography
-              sx={{
-                fontSize: "36px",
-                fontWeight: "bold",
-                color: "#FFCF40",
-                marginTop: "1rem",
+                padding: 2,
+                textAlign: "center",
+                borderRadius: 2,
+                height: "300px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "20px",
+                cursor: "pointer",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)",
+                },
               }}
             >
-              RAPPORT ANNUEL
-            </Typography>
-          </Box>
+              <BarChartIcon
+                sx={{
+                  fontSize: "80px",
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  color: "#FFCF40",
+                  marginTop: "1rem",
+                }}
+              >
+                RAPPORT ANNUEL
+              </Typography>
+            </Box>
+          </Grid>
 
           {/* ETUDE Box */}
-          <Box
-            sx={{
-              backgroundColor: "#1A4870",
-              color: "white",
-              padding: 2,
-              textAlign: "center",
-              borderRadius: 2,
-              width: "300px",
-              height: "300px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: "20px",
-              cursor: "pointer",
-            }}
-          >
-            <AutoStoriesIcon
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
               sx={{
-                fontSize: "80px",
+                backgroundColor: "#1A4870",
                 color: "white",
-              }}
-            />
-            <Typography
-              sx={{
-                fontSize: "36px",
-                fontWeight: "bold",
-                color: "#FFCF40",
-                marginTop: "1rem",
+                padding: 2,
+                textAlign: "center",
+                borderRadius: 2,
+                height: "300px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "20px",
+                cursor: "pointer",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)",
+                },
               }}
             >
-              ETUDE
-            </Typography>
-          </Box>
-        </Box>
+              <ArticleIcon
+                sx={{
+                  fontSize: "80px",
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  color: "#FFCF40",
+                  marginTop: "1rem",
+                }}
+              >
+                ETUDE
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
 
         {/* AVIS Modal */}
         <Modal
@@ -307,19 +327,7 @@ function Publication() {
               sx={{ marginTop: 2 }}
             />
             <TextField
-              label="Mots Clé"
-              variant="outlined"
-              fullWidth
-              sx={{ marginTop: 2 }}
-            />
-            <TextField
               label="Partie"
-              variant="outlined"
-              fullWidth
-              sx={{ marginTop: 2 }}
-            />
-            <TextField
-              label="Date"
               variant="outlined"
               fullWidth
               sx={{ marginTop: 2 }}
@@ -331,7 +339,13 @@ function Publication() {
               sx={{ marginTop: 2 }}
             />
             <TextField
-              label="Numéro"
+              label="Date"
+              variant="outlined"
+              fullWidth
+              sx={{ marginTop: 2 }}
+            />
+            <TextField
+              label="Mots clé"
               variant="outlined"
               fullWidth
               sx={{ marginTop: 2 }}
@@ -360,8 +374,8 @@ function Publication() {
             </Box>
           </Box>
         </Modal>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

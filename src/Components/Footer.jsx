@@ -58,7 +58,7 @@ export default function Footer() {
         <Grid item xs={12} sm={4} md={2} sx={{ textAlign: "center" }}>
           <Box>
             <img
-              src="./src/assets/logowhite.png"
+              src="imgs/logowhite.png"
               alt="Logo"
               style={{ marginBottom: "10px", maxWidth: "100px" }}
             />
