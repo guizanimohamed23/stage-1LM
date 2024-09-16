@@ -16,12 +16,7 @@ function Cards({ image, title, description, date, onButtonClick }) {
         marginTop: "5rem",
         borderRadius: ".7rem",
         minHeight: "225px",
-        bgcolor: "#EAEEF0",
-        transition: "transform 0.3s ease-in-out",
-        "&:hover": {
-          transform: "scale(1.05)",
-          boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
-        },
+
       }}
     >
       <CardActionArea onClick={onButtonClick}>
