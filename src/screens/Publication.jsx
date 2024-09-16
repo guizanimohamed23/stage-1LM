@@ -6,11 +6,20 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import BarChartIcon from "@mui/icons-material/BarChart";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import ArticleIcon from "@mui/icons-material/Article";
+import BorderColorIcon from "@mui/icons-material/BorderColor";
 
 function Publication() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [openAvis, setOpenAvis] = React.useState(false);
+  const [openDecision, setOpenDecision] = React.useState(false);
+
+  const handleOpenAvis = () => setOpenAvis(true);
+  const handleCloseAvis = () => setOpenAvis(false);
+
+  const handleOpenDecision = () => setOpenDecision(true);
+  const handleCloseDecision = () => setOpenDecision(false);
 
   // Style for the Modal Box
   const style = {
@@ -31,73 +40,191 @@ function Publication() {
       <div>
         <Box
           sx={{
-            backgroundColor: "#1A4870", // Set the box background color
-            color: "white", // Set the text color
-            padding: 2, // Add padding around the content
-            textAlign: "center", // Center the text and image
-            borderRadius: 2, // Add rounded corners
-            width: "300px", // Set a fixed width for the box
-            height: "300px", // Set a fixed height for the box
-            display: "flex", // Use flexbox for alignment
-            flexDirection: "column", // Align items vertically
-            alignItems: "center", // Center items horizontally
-            justifyContent: "center", // Center items vertically
+            display: "flex",
+            justifyContent: "center",
+            gap: "2rem", // Add space between the boxes
             marginTop: "10rem",
             marginBottom: "8rem",
-            borderRadius: "20px",
-            cursor: "pointer", // Show pointer cursor for clickability
+            flexWrap: "wrap",
           }}
-          onClick={handleOpen} // Open the modal when the box is clicked
         >
-          <img
-            src="/RAPPOORT.png"
-            style={{
-              width: "80px", // Adjust the width of the image to be smaller
-              height: "auto", // Maintain the aspect ratio
-            }}
-          />
-          <Typography
+          {/* AVIS Box */}
+          <Box
             sx={{
-              fontSize: "36px", // Increase the font size
-              fontWeight: "bold", // Make the text thicker
-              color: "#FFCF40", // Change the color to FFCF40
-              marginTop: "1rem", // Add space between the image and the text
+              backgroundColor: "#1A4870",
+              color: "white",
+              padding: 2,
+              textAlign: "center",
+              borderRadius: 2,
+              width: "300px",
+              height: "300px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "20px",
+              cursor: "pointer",
+            }}
+            onClick={handleOpenAvis}
+          >
+            <BorderColorIcon
+              sx={{
+                fontSize: "80px",
+                color: "white",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: "36px",
+                fontWeight: "bold",
+                color: "#FFCF40",
+                marginTop: "1rem",
+              }}
+            >
+              AVIS
+            </Typography>
+          </Box>
+
+          {/* DECISION Box */}
+          <Box
+            sx={{
+              backgroundColor: "#1A4870",
+              color: "white",
+              padding: 2,
+              textAlign: "center",
+              borderRadius: 2,
+              width: "300px",
+              height: "300px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "20px",
+              cursor: "pointer",
+            }}
+            onClick={handleOpenDecision}
+          >
+            <ArticleIcon
+              sx={{
+                fontSize: "80px",
+                color: "white",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: "36px",
+                fontWeight: "bold",
+                color: "#FFCF40",
+                marginTop: "1rem",
+              }}
+            >
+              DECISION
+            </Typography>
+          </Box>
+
+          {/* RAPPORT ANNUEL Box */}
+          <Box
+            sx={{
+              backgroundColor: "#1A4870",
+              color: "white",
+              padding: 2,
+              textAlign: "center",
+              borderRadius: 2,
+              width: "300px",
+              height: "300px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "20px",
+              cursor: "pointer",
             }}
           >
-            AVIS
-          </Typography>
+            <BarChartIcon
+              sx={{
+                fontSize: "80px",
+                color: "white",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: "36px",
+                fontWeight: "bold",
+                color: "#FFCF40",
+                marginTop: "1rem",
+              }}
+            >
+              RAPPORT ANNUEL
+            </Typography>
+          </Box>
+
+          {/* ETUDE Box */}
+          <Box
+            sx={{
+              backgroundColor: "#1A4870",
+              color: "white",
+              padding: 2,
+              textAlign: "center",
+              borderRadius: 2,
+              width: "300px",
+              height: "300px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "20px",
+              cursor: "pointer",
+            }}
+          >
+            <AutoStoriesIcon
+              sx={{
+                fontSize: "80px",
+                color: "white",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: "36px",
+                fontWeight: "bold",
+                color: "#FFCF40",
+                marginTop: "1rem",
+              }}
+            >
+              ETUDE
+            </Typography>
+          </Box>
         </Box>
 
-        {/* Modal Pop-up */}
+        {/* AVIS Modal */}
         <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
+          open={openAvis}
+          onClose={handleCloseAvis}
+          aria-labelledby="modal-avis-title"
+          aria-describedby="modal-avis-description"
         >
           <Box sx={style}>
             <Typography
-              id="modal-modal-title"
+              id="modal-avis-title"
               variant="h6"
               component="h2"
               sx={{
-                fontSize: "36px", // Increase the font size
-                fontWeight: "bold", // Make the text thicker
-                color: "#1A4870", // Set the color
-                marginTop: "1rem", // Add some spacing
-                textAlign: "center", // Ensure the text is centered
-                width: "100%", // Make sure the Typography takes full width of its container
+                fontSize: "36px",
+                fontWeight: "bold",
+                color: "#1A4870",
+                marginTop: "1rem",
+                textAlign: "center",
+                width: "100%",
               }}
             >
               AVIS
             </Typography>
 
-            {/* Text Fields */}
+            {/* Text Fields for AVIS */}
             <TextField
               label="Numéro"
               variant="outlined"
               fullWidth
-              sx={{ marginTop: 2 }} // Spacing between fields
+              sx={{ marginTop: 2 }}
             />
             <TextField
               label="Partie"
@@ -124,12 +251,97 @@ function Publication() {
               sx={{ marginTop: 2 }}
             />
 
-            {/* Search Button */}
-
+            {/* Search Button for AVIS */}
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "center", // Center the button horizontally
+                justifyContent: "center",
+              }}
+            >
+              <Button
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{
+                  marginTop: 2,
+                  backgroundColor: "#1A4870",
+                  borderRadius: "20px",
+                  maxWidth: "200px",
+                }}
+              >
+                RECHERCHER
+              </Button>
+            </Box>
+          </Box>
+        </Modal>
+
+        {/* DECISION Modal */}
+        <Modal
+          open={openDecision}
+          onClose={handleCloseDecision}
+          aria-labelledby="modal-decision-title"
+          aria-describedby="modal-decision-description"
+        >
+          <Box sx={style}>
+            <Typography
+              id="modal-decision-title"
+              variant="h6"
+              component="h2"
+              sx={{
+                fontSize: "36px",
+                fontWeight: "bold",
+                color: "#1A4870",
+                marginTop: "1rem",
+                textAlign: "center",
+                width: "100%",
+              }}
+            >
+              DECISION
+            </Typography>
+
+            {/* Text Fields for DECISION */}
+            <TextField
+              label="Verdict"
+              variant="outlined"
+              fullWidth
+              sx={{ marginTop: 2 }}
+            />
+            <TextField
+              label="Mots Clé"
+              variant="outlined"
+              fullWidth
+              sx={{ marginTop: 2 }}
+            />
+            <TextField
+              label="Partie"
+              variant="outlined"
+              fullWidth
+              sx={{ marginTop: 2 }}
+            />
+            <TextField
+              label="Date"
+              variant="outlined"
+              fullWidth
+              sx={{ marginTop: 2 }}
+            />
+            <TextField
+              label="Secteur"
+              variant="outlined"
+              fullWidth
+              sx={{ marginTop: 2 }}
+            />
+            <TextField
+              label="Numéro"
+              variant="outlined"
+              fullWidth
+              sx={{ marginTop: 2 }}
+            />
+
+            {/* Search Button for DECISION */}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <Button
