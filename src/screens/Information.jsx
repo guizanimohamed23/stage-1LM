@@ -20,7 +20,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import DownloadIcon from "@mui/icons-material/Download";
 import Fade from "@mui/material/Fade";
 import { useTranslation } from "react-i18next";
-import cover from "/image 3.png";
+import cover from "/imgs/image 3.png";
 import { InputAdornment } from "@mui/material"; // Import InputAdornment
 
 function Information() {

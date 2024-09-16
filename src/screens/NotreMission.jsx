@@ -41,7 +41,7 @@ function NotreMission() {
           <Box
             sx={{
               height: "300px",
-              backgroundImage: `url('/Rectangle 2.png')`,
+              backgroundImage: `url('/imgs/Rectangle 2.png')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               color: "white",

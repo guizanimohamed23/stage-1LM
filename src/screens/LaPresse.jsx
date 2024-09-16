@@ -8,19 +8,19 @@ import Fade from "@mui/material/Fade";
 
 // Same images for the Galerie section
 const galerieItems = [
-  { id: 1, image: "tunisie-conseil-concurrence 2.png", title: "Image 1" },
-  { id: 2, image: "tunisie-conseil-concurrence 2.png", title: "Image 2" },
-  { id: 3, image: "tunisie-conseil-concurrence 2.png", title: "Image 3" },
-  { id: 4, image: "tunisie-conseil-concurrence 2.png", title: "Image 4" },
-  { id: 5, image: "tunisie-conseil-concurrence 2.png", title: "Image 5" },
-  { id: 6, image: "tunisie-conseil-concurrence 2.png", title: "Image 6" },
-  { id: 7, image: "tunisie-conseil-concurrence 2.png", title: "Image 7" },
-  { id: 8, image: "tunisie-conseil-concurrence 2.png", title: "Image 8" },
+  { id: 1, image: "imgs/tunisie-conseil-concurrence 2.png", title: "Image 1" },
+  { id: 2, image: "imgs/tunisie-conseil-concurrence 2.png", title: "Image 2" },
+  { id: 3, image: "imgs/tunisie-conseil-concurrence 2.png", title: "Image 3" },
+  { id: 4, image: "imgs/tunisie-conseil-concurrence 2.png", title: "Image 4" },
+  { id: 5, image: "imgs/tunisie-conseil-concurrence 2.png", title: "Image 5" },
+  { id: 6, image: "imgs/tunisie-conseil-concurrence 2.png", title: "Image 6" },
+  { id: 7, image: "imgs/tunisie-conseil-concurrence 2.png", title: "Image 7" },
+  { id: 8, image: "imgs/tunisie-conseil-concurrence 2.png", title: "Image 8" },
 ];
 
 
 const images=[
-  '/images.jpeg','/images.jpeg','/images.jpeg','/images.jpeg','/images.jpeg','/images.jpeg','/images.jpeg','/images.jpeg',
+  'imgs/images.jpeg','imgs/images.jpeg','imgs/images.jpeg','imgs/images.jpeg','imgs/images.jpeg','imgs/images.jpeg','imgs/images.jpeg','imgs/images.jpeg',
 ]
 
 function LaPresse() {

@@ -97,7 +97,7 @@ const Navbar = () => {
       >
         <Box sx={{ display: {xs:'none',sm:'none',md:'flex'}, alignItems: "center", gap: 2 }}>
           <img
-            src="/red logo.png"
+            src="imgs/red logo.png"
             alt="Logo"
             style={{ width: 30, height: 30 }}
           />
@@ -188,13 +188,13 @@ const Navbar = () => {
         >
           {/* French language option */}
           <MenuItem onClick={() => {changeLanguage('fr'),handleCloseUserMenu()}}>
-            <img src="/logo france.png" alt="French" style={{ width: 30, height: 30, marginRight: 8 }} />
+            <img src="imgs/logo france.png" alt="French" style={{ width: 30, height: 30, marginRight: 8 }} />
             Français
           </MenuItem>
 
           {/* Arabic language option */}
           <MenuItem onClick={() => {changeLanguage('ar'),handleCloseUserMenu()}}>
-            <img src="/tunisia-logo.png" alt="Arabic" style={{ width: 30, height: 30, marginRight: 8 }} />
+            <img src="imgs/tunisia-logo.png" alt="Arabic" style={{ width: 30, height: 30, marginRight: 8 }} />
             العربية
           </MenuItem>
         </Menu>

@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-
+import { Link } from "react-router-dom";
 function Publication() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -44,7 +44,6 @@ function Publication() {
             justifyContent: "center", // Center items vertically
             marginTop: "10rem",
             marginBottom: "8rem",
-            borderRadius: "20px",
             cursor: "pointer", // Show pointer cursor for clickability
           }}
           onClick={handleOpen} // Open the modal when the box is clicked
@@ -132,6 +131,7 @@ function Publication() {
                 justifyContent: "center", // Center the button horizontally
               }}
             >
+              <Link to={'/recherche'}>
               <Button
                 variant="contained"
                 color="primary"
@@ -145,6 +145,7 @@ function Publication() {
               >
                 RECHERCHER
               </Button>
+              </Link>
             </Box>
           </Box>
         </Modal>

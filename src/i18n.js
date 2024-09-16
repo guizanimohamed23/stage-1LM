@@ -11,10 +11,10 @@ i18n
     fallbackLng: 'ar', // default language
     lng: 'ar', // start with French
     backend: {
-      loadPath: '/Locales/{{lng}}/translation.json', // Path to the translation files
+      loadPath: '/Locales/{{lng}}/translation.json',
     },
     interpolation: {
-      escapeValue: false, // React already escapes by default
+      escapeValue: false,
     },
   });
 
