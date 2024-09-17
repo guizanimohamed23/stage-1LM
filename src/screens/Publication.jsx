@@ -289,18 +289,20 @@ function Publication() {
                 justifyContent: "center",
               }}
             >
-              <Button
-                variant="contained"
-                color="primary"
-                fullWidth
-                sx={{
-                  marginTop: 2,
-                  backgroundColor: "#1A4870",
-                  borderRadius: 2,
-                }}
-              >
-                Rechercher
-              </Button>
+              <Link to="/recherche">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                  sx={{
+                    marginTop: 2,
+                    backgroundColor: "#1A4870",
+                    borderRadius: 2,
+                  }}
+                >
+                  Rechercher
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Modal>
@@ -368,18 +370,20 @@ function Publication() {
                 justifyContent: "center",
               }}
             >
-              <Button
-                variant="contained"
-                color="primary"
-                fullWidth
-                sx={{
-                  marginTop: 2,
-                  backgroundColor: "#1A4870",
-                  borderRadius: 2,
-                }}
-              >
-                Rechercher
-              </Button>
+              <Link to="/recherche">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                  sx={{
+                    marginTop: 2,
+                    backgroundColor: "#1A4870",
+                    borderRadius: 2,
+                  }}
+                >
+                  Rechercher
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Modal>

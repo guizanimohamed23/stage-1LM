@@ -1,14 +1,22 @@
-import { TableContainer,Table,TableCell,TableBody,TableHead,TableRow, } from "@mui/material"
+import {
+  TableContainer,
+  Table,
+  TableCell,
+  TableBody,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
+import { CenterFocusStrong } from "@mui/icons-material";
 
 function Recherche() {
   return (
     <div>
-        <Navbar/>
+      <Navbar />
 
-        <TableContainer
+      <TableContainer
         sx={{
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           borderRadius: "8px",
@@ -51,7 +59,7 @@ function Recherche() {
                   borderTopRightRadius: "8px",
                 }}
               >
-                 
+                <Typography>resultat</Typography>
               </TableCell>
             </TableRow>
             <TableRow>
@@ -64,7 +72,7 @@ function Recherche() {
                   fontSize: { xs: "12px", sm: "14px" },
                 }}
               >
-                 
+                <Typography textAlign={"center"}>Num</Typography>
               </TableCell>
               <TableCell
                 sx={{
@@ -75,7 +83,7 @@ function Recherche() {
                   fontSize: { xs: "12px", sm: "14px" },
                 }}
               >
-                 
+                <Typography textAlign={"center"}>Titre</Typography>
               </TableCell>
               <TableCell
                 sx={{
@@ -86,7 +94,7 @@ function Recherche() {
                   fontSize: { xs: "12px", sm: "14px" },
                 }}
               >
-                 
+                <Typography textAlign={"center"}>Secteur</Typography>
               </TableCell>
               <TableCell
                 sx={{
@@ -97,7 +105,7 @@ function Recherche() {
                   fontSize: { xs: "12px", sm: "14px" },
                 }}
               >
-                 
+                <Typography textAlign={"center"}>Demandeur</Typography>
               </TableCell>
               <TableCell
                 sx={{
@@ -108,7 +116,7 @@ function Recherche() {
                   fontSize: { xs: "12px", sm: "14px" },
                 }}
               >
-                 
+                <Typography textAlign={"center"}>Type</Typography>
               </TableCell>
               <TableCell
                 sx={{
@@ -119,472 +127,364 @@ function Recherche() {
                   fontSize: { xs: "12px", sm: "14px" },
                 }}
               >
-                 
+                <Typography textAlign={"center"}>PDF</Typography>
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
 
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
 
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
 
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
 
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
-              <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-                <TableCell
-                  sx={{
-                    padding: { xs: "8px", sm: "12px" },
-                    border: "1px solid #ddd",
-                  }}
-                >
-                   
-                </TableCell>
-              </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
+            <TableRow sx={{ backgroundColor: "#D4E6F1" }}>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+              <TableCell
+                sx={{
+                  padding: { xs: "8px", sm: "12px" },
+                  border: "1px solid #ddd",
+                }}
+              ></TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </TableContainer>
 
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Recherche
+export default Recherche;
