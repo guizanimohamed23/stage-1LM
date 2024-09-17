@@ -5,7 +5,7 @@ import Divider from "@mui/material/Divider";
 import { useTranslation } from 'react-i18next';
 
 function AboutUs() {
-  const { t } = useTranslation(); // Use the translation hook
+  const { t } = useTranslation(); 
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }} marginTop={"3rem"}>
