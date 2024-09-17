@@ -6,6 +6,7 @@ import NotreMission from "./screens/NotreMission";
 import Publication from "./screens/Publication";
 import LaPresse from "./screens/LaPresse";
 import Recherche from "./screens/Recherche";
+import Etude from "./screens/etude";
 
 function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ function AppRoutes() {
         <Route path="actualite" element={<Actualite />} />
         <Route path="presse" element={<LaPresse />} />
         <Route path="recherche" element={<Recherche />} />
+        <Route path="etude" element={<Etude />} />
       </Routes>
     </Router>
   );
