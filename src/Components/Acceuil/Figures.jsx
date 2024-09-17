@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import EditCalendarIcon from "@mui/icons-material/EditCalendar";
@@ -46,8 +46,8 @@ function Figures() {
                     color: "white",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.2)", // "Pop" effect
-                      color: "blue", // Color change on hover
+                      transform: "scale(1.2)", 
+                      color: "blue", 
                     },
                   }}
                 />
@@ -60,8 +60,8 @@ function Figures() {
                     color: "white",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.2)", // "Pop" effect
-                      color: "blue", // Color change on hover
+                      transform: "scale(1.2)", 
+                      color: "blue",
                     },
                   }}
                 >
@@ -74,8 +74,8 @@ function Figures() {
                     fontSize: "24px",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.2)", // "Pop" effect
-                      color: "#FF7B07", // Color change on hover
+                      transform: "scale(1.2)",
+                      color: "#FF7B07",
                     },
                   }}
                 >
@@ -100,8 +100,8 @@ function Figures() {
                     color: "white",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.2)", // "Pop" effect
-                      color: "blue", // Color change on hover
+                      transform: "scale(1.2)",
+                      color: "blue",
                     },
                   }}
                 />
@@ -114,8 +114,8 @@ function Figures() {
                     color: "white",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.2)", // "Pop" effect
-                      color: "blue", // Color change on hover
+                      transform: "scale(1.2)",
+                      color: "blue",
                     },
                   }}
                 >
@@ -128,8 +128,8 @@ function Figures() {
                     fontSize: "24px",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.2)", // "Pop" effect
-                      color: "#FF7B07", // Color change on hover
+                      transform: "scale(1.2)",
+                      color: "#FF7B07",
                     },
                   }}
                 >
@@ -154,8 +154,8 @@ function Figures() {
                     color: "white",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.2)", // "Pop" effect
-                      color: "blue", // Color change on hover
+                      transform: "scale(1.2)",
+                      color: "blue",
                     },
                   }}
                 />
@@ -168,8 +168,8 @@ function Figures() {
                     color: "white",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.2)", // "Pop" effect
-                      color: "blue", // Color change on hover
+                      transform: "scale(1.2)",
+                      color: "blue",
                     },
                   }}
                 >
@@ -182,8 +182,8 @@ function Figures() {
                     fontSize: "24px",
                     transition: "transform 0.3s ease, color 0.3s ease",
                     "&:hover": {
-                      transform: "scale(1.1)", // "Pop" effect
-                      color: "#FF7B07", // Color change on hover
+                      transform: "scale(1.1)",
+                      color: "#FF7B07",
                     },
                   }}
                 >

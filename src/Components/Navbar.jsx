@@ -148,7 +148,7 @@ const Navbar = () => {
           </IconButton>
           <Box sx={{ alignItems: "center", gap: 2,position:'absolute',left:'45%',top:'25%'}}>
           <img
-            src="/red logo.png"
+            src="imgs/red logo.png"
             alt="Logo"
             style={{ width: 30, height: 30 }}
           />

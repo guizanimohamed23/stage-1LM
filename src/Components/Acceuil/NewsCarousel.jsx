@@ -101,8 +101,8 @@ function NewsCarousel() {
             }}
           >
             <Box position={'absolute'} top={'20%'}>
-              <Typography variant='h4'> <strong> {images[activeStep].label} </strong></Typography>
-              <Typography>{t('carousel.seeMore')}</Typography>
+              <Typography variant='h4' marginBottom={'.5rem'}> <strong> {images[activeStep].label} </strong></Typography>
+              <Typography marginBottom={'1rem'}>{t('carousel.seeMore')}</Typography>
               <Button sx={{color: 'white', bgcolor: '#EABA2B', borderRadius: '2rem'}}>
                 {t('carousel.seeMoreButton')}
               </Button>
@@ -152,12 +152,14 @@ function NewsCarousel() {
           <Button
             onClick={handleBack}
             disabled={activeStep === 0}
+            disableRipple
           >
             <KeyboardArrowLeft sx={{color: 'black', bgcolor: '#EABA2B', borderRadius: '20px'}} />
           </Button>
           <Button
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
+            disableRipple
           >
             <KeyboardArrowRight sx={{color: 'black', bgcolor: '#EABA2B', borderRadius: '20px'}}/>
           </Button>

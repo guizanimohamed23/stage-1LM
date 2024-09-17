@@ -26,10 +26,7 @@ function Cards() {
         >
           <Card
             sx={{
-              minHeight: "225px",
-              bgcolor: "#EAEEF0",
-              borderRadius: ".7rem",
-              minHeight: "225px",
+              height:'300px', 
               bgcolor: "#EAEEF0",
               borderRadius: ".7rem",
               transition: "transform 0.3s ease-in-out",
@@ -81,10 +78,7 @@ function Cards() {
         <Grid item size={{ xs: 6, md: 3 }}>
           <Card
             sx={{
-              minHeight: "225px",
-              bgcolor: "#EAEEF0",
-              borderRadius: ".7rem",
-              minHeight: "225px",
+              height:'300px', 
               bgcolor: "#EAEEF0",
               borderRadius: ".7rem",
               transition: "transform 0.3s ease-in-out",
@@ -136,10 +130,7 @@ function Cards() {
         <Grid item size={{ xs: 6, md: 3 }}>
           <Card
             sx={{
-              minHeight: "225px",
-              bgcolor: "#EAEEF0",
-              borderRadius: ".7rem",
-              minHeight: "225px",
+              height:'300px',
               bgcolor: "#EAEEF0",
               borderRadius: ".7rem",
               transition: "transform 0.3s ease-in-out",
@@ -190,11 +181,9 @@ function Cards() {
         </Grid>
         <Grid item size={{ xs: 6, md: 3 }}>
           <Card
+          size
             sx={{
-              minHeight: "225px",
-              bgcolor: "#EAEEF0",
-              borderRadius: ".7rem",
-              minHeight: "225px",
+              height:'300px',
               bgcolor: "#EAEEF0",
               borderRadius: ".7rem",
               transition: "transform 0.3s ease-in-out",
